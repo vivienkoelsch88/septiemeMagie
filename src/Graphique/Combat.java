@@ -6,6 +6,7 @@ import Graphique.Bouton.Bouton1;
 import Graphique.Bouton.Bouton2;
 import Graphique.Bouton.Bouton3;
 import Monstre.Monstre;
+import javafx.scene.layout.Background;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -17,6 +18,7 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.GraphicsEnvironment;
 
 public class Combat extends JPanel implements MouseListener, ActionListener {
     private Warrior warrior;
@@ -32,27 +34,51 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
     private ListDialCombat dial;
     private ArrayList<Techniques> main= new ArrayList();
     private ArrayList<Techniques> deck= new ArrayList();
-    private boolean choixCarte = false;
+    private boolean choixCarte = true;
     private Techniques techniqueChoisie;
     private Fenetre fen;
+    private String dommage = "";
+    private int AnimationDommage = 0;
+    private boolean choixBouton = true;
 
+//    ************** Animation de dommage adverse **************************
+    private Timer timer = new Timer(20, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(AnimationDommage < 30) {
+                AnimationDommage++;
+                repaint();
+            } else {
+                AnimationDommage = 0;
+                dommage = "";
+                repaint();
+                timer.stop();
+            }
+        }
+    });
 
+//******************************Constructeur *******************************
     public Combat(Fenetre fen) {
         addMouseListener(this);
         this.dial = new ListDialCombat();
         this.fen = fen;
     }
 
+//    ********************* PaintComponent ************************************
     public void paintComponent(Graphics g){
         try {
+//            ************************Background*******************************
             Image img = ImageIO.read(new File(imageDeFond));
             g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
+//            ************************** Monstre ********************************
             Image img2 = ImageIO.read(new File(persoDroite));
             g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+//        *********************** Fenêtre de dialogue ********************************
         g.fillRoundRect(0, this.getHeight()-130, this.getWidth(), 100, 5, 5);
         Font font = new Font("desc", Font.BOLD, 12);
         g.setFont(font);
@@ -61,6 +87,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         g.drawString(ligne2, 20, this.getHeight()-75);
         g.drawString(ligne3, 20, this.getHeight()-55);
 
+//        ************************** States du joueur ***************************************
         g.setColor((Color.GRAY));
         g.fillRoundRect(5 , 5, this.getWidth()/4, this.getHeight()/4, 5, 5);
         g.setColor((Color.WHITE));
@@ -72,6 +99,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         g.drawString("Attaque : " + this.warrior.getAttaque() + "  Défense : " + this.warrior.getDefense(), 15, 130);
         g.drawString("Vie : " + this.warrior.getLife(), 15, 150);
 
+//        **************************** zone de choix d'investissement ******************************'
         g.setColor((Color.WHITE));
         g.fillRoundRect(this.getWidth()-120 , this.getHeight()- 90, zoneText * 100, zoneText * 40, 5, 5);
         g.setColor((Color.BLACK));
@@ -79,7 +107,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
             g.drawString(text, this.getWidth()-110, this.getHeight()- 68);
         }
 
-
+//****************************************** Affichage de la main *************************************
         font.deriveFont(8);
         if(this.main.size() > 0){
             int placement = 190;
@@ -97,12 +125,20 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 
         }
 
+//        *************************************** Animation des dommages *********************************
+        font = new Font("Source Code Pro Semibold", Font.BOLD, 50);
+        g.setFont(font);
+        g.setColor((Color.RED));
+
+        g.drawString(dommage, fen.getWidth() - 120, 100 - (AnimationDommage));
+
+
     }
 
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if(!choixCarte) {
+        if(choixCarte) {
             if (continu == 1) {
                 ligne1 = dial.dial1(continu, this.warrior);
                 ligne2 = dial.dial2(continu, this.warrior);
@@ -118,11 +154,18 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
                 tourDeCombat();
                 continu++;
             }
-            if (continu == 6) {
+            if (continu == 7) {
                 riposteDuMonstre();
                 continu++;
             }
+            if (continu == 10) {
+                ligne1 = "";
+                ligne2 = "Le gobelin tombe sous vos coups, bien joué!";
+                ligne3 = "";
+                repaint();
+            }
         }
+
     }
 
     private void piochePremiereMain(){
@@ -132,13 +175,17 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         }
     }
 
+
     private void tourDeCombat(){
 //            ********************** Choix de la carte *********************************
             choixCarte = true;
+            choixBouton = true;
+            continu++;
             ligne1 = "";
             ligne2 = "Choisissez une carte";
             ligne3 = "";
 
+//            **************************** Création des boutons ****************************
         this.setLayout(null);
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
@@ -160,6 +207,91 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         repaint();
 
     }
+
+    public void choixTechnique(int choix){
+        if(choixBouton) {
+            this.ligne1 = "vous avez choisis la carte " + this.deck.get(choix).getName();
+            this.ligne2 = "Combien y investissez vous?";
+            this.zoneText = 1;
+            this.techniqueChoisie = this.deck.get(choix);
+            repaint();
+            this.fen.requestFocus();
+        }
+    }
+
+    public void keyPressed(KeyEvent e) throws InterruptedException {
+        char Caract = e.getKeyChar();
+        String carS = String.valueOf(Caract);
+
+//        ********************************************* Investissement **********************************
+        if(zoneText == 1){
+            if(carS.equals("1") || carS.equals("2") || carS.equals("3") || carS.equals("4") || carS.equals("5") || carS.equals("6") || carS.equals("7") || carS.equals("8") || carS.equals("9") || carS.equals("0")) {
+                if(text.length() < 3) {
+                    this.text = this.text + Caract;
+                    repaint();
+                }
+            }
+            if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+                choixBouton = false;
+//                ************************* Vérification technique niveau 1 *********************************
+                if(Integer.parseInt(this.text) <= techniqueChoisie.getLevel()*10 && Integer.parseInt(this.text) >= 0) {
+                    this.zoneText = 0;
+                    continu++;
+                    choixCarte = false;
+                    choixBouton = false;
+                    this.warrior.setMonstre(this.monstre);
+
+//                    **************************** Utilisation de la technique par le joueur *********************
+                    this.techniqueChoisie.utilisation(warrior, Integer.parseInt(this.text));
+                    this.ligne1 = techniqueChoisie.getMoveDesc();
+                    this.ligne2 = techniqueChoisie.getMoveDesc2();
+                    this.ligne3 = techniqueChoisie.getMoveDesc3();
+                    repaint();
+
+//                    ****************************** Sit la technique est une attaque, dommage au monstre *******************
+                    if(this.warrior.getAttaque() + this.warrior.getAttaqueBonus() > 0){
+                        this.dommage = "" + this.monstre.prendreDommages(this.warrior.getAttaque() + this.warrior.getAttaqueBonus());
+
+//                    *********************** Animation de dommage ***************************
+                        timer.start();
+                    }
+                    this.text = "";
+
+                    if(this.monstre.getLife()>0) {
+                        continu++;
+                        choixCarte = true;
+                    } else {
+                        choixCarte = true;
+                        continu = 10;
+                    }
+
+                } else {
+                    ligne1 = "";
+                    ligne2 = "Euh non, la technique est niveau 1";
+                    ligne3 = "Tu ne peux investir q'entre 0 et 10 points";
+                    this.text = "";
+                    repaint();
+                }
+            }
+            if(e.getKeyCode()==KeyEvent.VK_DELETE  || e.getKeyCode()==KeyEvent.VK_BACK_SPACE) {
+                if(this.text.length() > 0) {
+                    this.text = this.text.substring(0, this.text.length() - 1);
+                    repaint();
+                }
+            }
+
+        }
+    }
+
+    private void riposteDuMonstre(){
+        this.warrior.prendreDommages(this.monstre.patern(warrior));
+        this.ligne1 = this.monstre.getMoveDesc();
+        this.ligne2 = this.monstre.getMoveDesc2();
+        this.ligne3 = this.monstre.getMoveDesc3();
+        repaint();
+        continu = 2;
+    }
+
 
     @Override
     public void mouseReleased(MouseEvent e) {
@@ -216,64 +348,6 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-    }
-
-    public void choixTechnique(int choix){
-        this.ligne1 = "vous avez choisis la carte " + this.deck.get(choix).getName();
-        this.ligne2 = "Combien y investissez vous?";
-        this.zoneText = 1;
-        this.techniqueChoisie = this.deck.get(choix);
-        repaint();
-        this.fen.requestFocus();
-    }
-
-    public void keyPressed(KeyEvent e) {
-        char Caract = e.getKeyChar();
-        String carS = String.valueOf(Caract);
-        if(zoneText == 1){
-            if(carS.equals("1") || carS.equals("2") || carS.equals("3") || carS.equals("4") || carS.equals("5") || carS.equals("6") || carS.equals("7") || carS.equals("8") || carS.equals("9") || carS.equals("0")) {
-                if(text.length() < 3) {
-                    this.text = this.text + Caract;
-                    repaint();
-                }
-            }
-            if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-                if(Integer.parseInt(this.text) <= 10 && Integer.parseInt(this.text) >= 0) {
-                    continu++;
-                    this.zoneText = 0;
-                    choixCarte = false;
-                    this.warrior.setMonstre(this.monstre);
-                    this.techniqueChoisie.utilisation(warrior, Integer.parseInt(this.text));
-                    this.ligne1 = techniqueChoisie.getMoveDesc();
-                    this.ligne2 = techniqueChoisie.getMoveDesc2();
-                    this.ligne3 = techniqueChoisie.getMoveDesc3();
-                    repaint();
-                    continu++;
-
-                } else {
-                    ligne1 = "";
-                    ligne2 = "Euh non, la technique est niveau 1";
-                    ligne3 = "Tu ne peux investir q'entre 0 et 10 points";
-                    this.text = "";
-                    repaint();
-                }
-            }
-            if(e.getKeyCode()==KeyEvent.VK_DELETE  || e.getKeyCode()==KeyEvent.VK_BACK_SPACE) {
-                if(this.text.length() > 0) {
-                    this.text = this.text.substring(0, this.text.length() - 1);
-                    repaint();
-                }
-            }
-
-        }
-    }
-
-    private void riposteDuMonstre(){
-        this.warrior.prendreDommages(this.monstre.patern(warrior));
-        this.ligne1 = this.monstre.getMoveDesc();
-        this.ligne2 = this.monstre.getMoveDesc2();
-        this.ligne3 = this.monstre.getMoveDesc3();
-        repaint();
     }
 
 }

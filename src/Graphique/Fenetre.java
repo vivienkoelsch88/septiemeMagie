@@ -65,7 +65,10 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         if(this.actif.equals("pan")){
             pan.keyPressed(e);
         } else if (this.actif.equals("panCombat")){
-            panCombat.keyPressed(e);
+            try {
+                panCombat.keyPressed(e);
+            } catch (InterruptedException e1) {
+            }
         }
 
 

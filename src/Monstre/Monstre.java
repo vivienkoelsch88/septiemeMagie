@@ -117,7 +117,7 @@ public abstract class Monstre {
         this.nextMoveType = nextMoveType;
     }
 
-    public void prendreDommages(int dommages){
+    public int prendreDommages(int dommages){
         int domm = dommages -defense - defenseBonus;
 
         domm =  domm < 0 ? 0: domm;
@@ -125,6 +125,7 @@ public abstract class Monstre {
         System.out.println(this.name + " reçoit " + domm + "(" + dommages + ")" +" dommages");
         this.life = this.life - domm;
 
+        return domm;
     }
 
     public String getMoveDesc() {
