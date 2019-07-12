@@ -3,8 +3,6 @@ package CartesGuerrier;
 
 import Personnages.Warrior;
 
-import java.util.Scanner;
-
 public class ChangementDePosition extends Techniques {
 
     public ChangementDePosition() {
@@ -27,7 +25,7 @@ public class ChangementDePosition extends Techniques {
     }
 
     @Override
-    public void effetFinDeTour(Scanner sc, Warrior warrior) {
+    public void effetFinDeTour(Warrior warrior) {
 
     }
 

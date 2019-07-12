@@ -10,10 +10,6 @@ public class MaitreDesRunes extends Warrior {
 
 //    ************************ Getter and setter **************************
 
-    @Override
-    public ArrayList<ArtMartiaux> getArts() {
-        return null;
-    }
 
     @Override
     public void setArtsLearned(ArtMartiaux artsLearned) {
@@ -41,17 +37,7 @@ public class MaitreDesRunes extends Warrior {
     }
 
     @Override
-    public void showPerso() {
-
-    }
-
-    @Override
     public ArrayList<Techniques> getDeck() {
         return null;
-    }
-
-    @Override
-    public void combatre(Scanner sc) {
-
     }
 }

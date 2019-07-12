@@ -34,7 +34,6 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
     private ListDialCombat dial;
     private ArrayList<Techniques> main= new ArrayList();
     private ArrayList<Techniques> deck= new ArrayList();
-    private boolean choixCarte = true;
     private Techniques techniqueChoisie;
     private Fenetre fen;
     private String dommage = "";
@@ -138,38 +137,40 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if(choixCarte) {
-            if (continu == 1) {
+        System.out.println(continu);
+        switch (continu){
+            case 1 :
+                piochePremiereMain();
                 ligne1 = dial.dial1(continu, this.warrior);
                 ligne2 = dial.dial2(continu, this.warrior);
                 ligne3 = dial.dial3(continu, this.warrior);
-                continu++;
+                continu = 2;
                 repaint();
-            }
-            if (continu == 2) {
-                piochePremiereMain();
-                continu++;
-            }
-            if (continu == 3) {
+                break;
+
+            case 2 :
+                continu = 3;
                 tourDeCombat();
-                continu++;
-            }
-            if (continu == 7) {
+                break;
+
+            case 4 :
                 riposteDuMonstre();
                 this.warrior.resetBonus();
                 this.monstre.resetBonus();
-            }
-            if (continu == 10) {
+                break;
+
+            case 10 :
                 ligne1 = "";
                 ligne2 = "Le gobelin tombe sous vos coups, bien joué!";
                 ligne3 = "";
                 repaint();
-                continu++;
-            }if (continu == 11) {
-                this.fen.CreationPersonnage();
-            }
-        }
+                continu = 11;
+                break;
 
+            case 11 :
+                this.fen.CreationPersonnage();
+                break;
+        }
     }
 
     private void piochePremiereMain(){
@@ -182,9 +183,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 
     private void tourDeCombat(){
 //            ********************** Choix de la carte *********************************
-            choixCarte = true;
             choixBouton = true;
-            continu++;
             ligne1 = "";
             ligne2 = "Choisissez une carte";
             ligne3 = "";
@@ -240,8 +239,6 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 //                ************************* Vérification technique niveau 1 *********************************
                 if(Integer.parseInt(this.text) <= techniqueChoisie.getLevel()*10 && Integer.parseInt(this.text) >= 0) {
                     this.zoneText = 0;
-                    continu++;
-                    choixCarte = false;
                     choixBouton = false;
                     this.warrior.setMonstre(this.monstre);
 
@@ -252,7 +249,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
                     this.ligne3 = techniqueChoisie.getMoveDesc3();
                     repaint();
 
-//                    ****************************** Sit la technique est une attaque, dommage au monstre *******************
+//                    ****************************** Si la technique est une attaque, dommage au monstre *******************
                     if(this.warrior.getAttaque() + this.warrior.getAttaqueBonus() > 0){
                         this.dommage = "" + this.monstre.prendreDommages(this.warrior.getAttaque() + this.warrior.getAttaqueBonus());
 
@@ -262,10 +259,8 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
                     this.text = "";
 
                     if(this.monstre.getLife()>0) {
-                        continu++;
-                        choixCarte = true;
+                        continu = 4;
                     } else {
-                        choixCarte = true;
                         continu = 10;
                     }
 
@@ -293,7 +288,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         this.ligne2 = this.monstre.getMoveDesc2();
         this.ligne3 = this.monstre.getMoveDesc3();
         repaint();
-        continu = 3;
+        continu = 2;
     }
 
 

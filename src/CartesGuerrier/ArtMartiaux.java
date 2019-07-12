@@ -1,9 +1,6 @@
 package CartesGuerrier;
 
-import CartesGuerrier.Techniques;
 import Personnages.Warrior;
-
-import java.util.Scanner;
 
 public class ArtMartiaux extends Techniques {
     private String MoveDesc = "";
@@ -42,12 +39,6 @@ public class ArtMartiaux extends Techniques {
             super.setLevel(1);
             super.setType("Défense");
 
-        } else if (choixTec == 5){
-            super.setName("Esquive");
-            super.setCout(5);
-            super.setDesc("Se concentrer sur l'esquive, sans penser à frapper... Parfois ça sauve la vie...");
-            super.setLevel(1);
-            super.setType("Défense");
         }
 
     }
@@ -72,7 +63,6 @@ public class ArtMartiaux extends Techniques {
     }
 //    ******************************************************************************************************
     private void attaqueFurieuse(Warrior guerrier, int invest){
-        System.out.println("Vous vous ruez donc sur votre adversaire, les yeux rouges et une envie de meurtre dans les yeux...");
         this.MoveDesc2 = "Vous vous ruez donc sur votre adversaire, les yeux rouges et une envie de meurtre dans les yeux...";
         guerrier.setAttaqueBonus(invest *2);
         guerrier.setDefenseBonus(invest);
@@ -82,7 +72,6 @@ public class ArtMartiaux extends Techniques {
     }
 
     private void attaquePrudente(Warrior guerrier, int invest){
-        System.out.println("Qui veut voyager loin ménage sa monture hein?");
         this.MoveDesc2 = "Qui veut voyager loin ménage sa monture hein?";
         guerrier.setAttaqueBonus(invest * -1);
         guerrier.setDefenseBonus(invest * 2);
@@ -92,7 +81,6 @@ public class ArtMartiaux extends Techniques {
     }
 
     private void riposte(Warrior guerrier, int invest){
-        System.out.println("Bien, vous vous campez sur vos jambes, prêt à contrattaquer...");
         this.MoveDesc = "Bien, vous vous campez sur vos jambes, prêt à contrattaquer...";
         if(guerrier.getMonstre().getNextMoveType().equals("Attaque")){
             this.MoveDesc2 = "et d'une fente magistrale, vous surprenez votre adversaire au moment où celui-ci vous attaque";
@@ -109,7 +97,6 @@ public class ArtMartiaux extends Techniques {
     }
 
     private void esquive(Warrior guerrier, int invest){
-        System.out.println("Oui vous portez une armure, mais une esquive ce n'est pas obligatoirement un salto arrière vous savez?");
         this.MoveDesc2 = "Oui vous portez une armure, mais une esquive ce n'est pas obligatoirement un salto arrière vous savez?";
         guerrier.setAttaqueBonus(guerrier.getAttaque() * -1);
         guerrier.setDefenseBonus(invest + guerrier.getDefense());
@@ -122,7 +109,7 @@ public class ArtMartiaux extends Techniques {
     }
 
     @Override
-    public void effetFinDeTour(Scanner sc, Warrior warrior) {
+    public void effetFinDeTour(Warrior warrior) {
 
     }
 

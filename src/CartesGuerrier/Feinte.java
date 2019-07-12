@@ -2,8 +2,6 @@ package CartesGuerrier;
 
 import Personnages.Warrior;
 
-import java.util.Scanner;
-
 public class Feinte extends Techniques{
     public Feinte() {
         super();
@@ -26,7 +24,7 @@ public class Feinte extends Techniques{
     }
 
     @Override
-    public void effetFinDeTour(Scanner sc, Warrior warrior) {
+    public void effetFinDeTour(Warrior warrior) {
 
     }
     @Override

@@ -10,7 +10,6 @@ public abstract class Monstre {
 
     private boolean faiblesse;
 
-    private int lifeBonus = 0;
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
 
@@ -32,7 +31,6 @@ public abstract class Monstre {
     public abstract int patern(Warrior warrior);
 
     public void resetBonus (){
-        this.lifeBonus = 0;
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
     }
@@ -67,14 +65,6 @@ public abstract class Monstre {
 
     public void setDefense(int defense) {
         this.defense = defense;
-    }
-
-    public int getLifeBonus() {
-        return lifeBonus;
-    }
-
-    public void setLifeBonus(int lifeBonus) {
-        this.lifeBonus = lifeBonus;
     }
 
     public int getAttaqueBonus() {
@@ -120,9 +110,9 @@ public abstract class Monstre {
     public int prendreDommages(int dommages){
         int domm = dommages -defense - defenseBonus;
 
-        domm =  domm < 0 ? 0: domm;
-
-        System.out.println(this.name + " reçoit " + domm + "(" + dommages + ")" +" dommages");
+        if(domm < 0){
+            domm = 0;
+        }
         this.life = this.life - domm;
 
         return domm;

@@ -13,17 +13,18 @@ public abstract class Warrior {
     private int life;
     private int attaque;
     private int defense;
+
     private int concentration = 30;
     private int force;
     private int adresse;
     private int charisme;
+
     private Monstre monstre;
     private boolean faiblesse = false;
 
     private ArrayList<Techniques> deck = new ArrayList<>();
     private ArrayList<Techniques> effetFinDeTour = new ArrayList<>();
 
-    private int lifeBonus = 0;
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
     private int pioche = 0;
@@ -45,14 +46,15 @@ public abstract class Warrior {
         effetFinDeTour.add(techniques);
     }
 
+    public void resetEffetFinDeTour() {
+        this.effetFinDeTour = new ArrayList<>();
+    }
 
     public ArrayList<Techniques> getEffetFinDeTour() {
         return effetFinDeTour;
     }
 
-    public void setEffetFinDeTour(ArrayList<Techniques> effetFinDeTour) {
-        this.effetFinDeTour = effetFinDeTour;
-    }
+
 
     public Monstre getMonstre() {
         return monstre;
@@ -106,14 +108,6 @@ public abstract class Warrior {
         this.defense = defense;
     }
 
-    public int getLifeBonus() {
-        return lifeBonus;
-    }
-
-    public void setLifeBonus(int lifeBonus) {
-        this.lifeBonus = lifeBonus;
-    }
-
     public int getAttaqueBonus() {
         return attaqueBonus;
     }
@@ -138,7 +132,7 @@ public abstract class Warrior {
         this.deck = deck;
     }
 
-    public void ajouterCarte(Techniques techniques){
+    public void ajouterCarteDeck(Techniques techniques){
         this.deck.add(techniques);
     }
 
@@ -180,28 +174,18 @@ public abstract class Warrior {
 
     public void prendreDommages(int dommages){
         if(dommages -defense - defenseBonus > 0) {
-            System.out.println("Vous recevez " + (dommages - defense - defenseBonus) + "(" + dommages + ")" + " dommages");
             this.life = this.life - (dommages - defense - defenseBonus);
-        } else {
-            System.out.println("Bon, l'attaque ne traverse pas votre armure, c'est toujours ça de pris");
-        }
-        if(this.life <1){
-            System.out.println("Aïe, ça fait beaucoup de dommages tout ça, mis bout à bout... Ca suffit même à vous tuer...");
         }
     }
 
-    public abstract ArrayList<ArtMartiaux> getArts();
     public abstract void setArtsLearned(ArtMartiaux artsLearned);
     public abstract ArrayList<ArtMartiaux> getArtsLearned();
     public abstract int getEndurance();
     public abstract void setEndurance(int endurance);
     public abstract void perteEndurance(int perte);
-    public abstract void showPerso();
     public abstract ArrayList<Techniques> getDeck();
-    public abstract void combatre(Scanner sc);
 
     public void resetBonus (){
-        this.lifeBonus = 0;
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
     }

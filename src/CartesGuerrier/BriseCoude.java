@@ -2,8 +2,6 @@ package CartesGuerrier;
 
 import Personnages.Warrior;
 
-import java.util.Scanner;
-
 public class BriseCoude extends Techniques{
 
     public BriseCoude() {
@@ -24,7 +22,7 @@ public class BriseCoude extends Techniques{
     }
 
     @Override
-    public void effetFinDeTour(Scanner sc, Warrior warrior) {
+    public void effetFinDeTour(Warrior warrior) {
 
     }
 

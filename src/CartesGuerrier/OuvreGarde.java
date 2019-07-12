@@ -2,8 +2,6 @@ package CartesGuerrier;
 
 import Personnages.Warrior;
 
-import java.util.Scanner;
-
 public class OuvreGarde extends Techniques{
     public OuvreGarde() {
         super();
@@ -23,7 +21,7 @@ public class OuvreGarde extends Techniques{
     }
 
     @Override
-    public void effetFinDeTour(Scanner sc, Warrior warrior) {
+    public void effetFinDeTour(Warrior warrior) {
 
     }
     @Override

@@ -2,8 +2,6 @@ package CartesGuerrier;
 
 import Personnages.Warrior;
 
-import java.util.Scanner;
-
 public abstract class Techniques {
     private String name;
     private int cout;
@@ -55,7 +53,7 @@ public abstract class Techniques {
     }
 
     public abstract void utilisation (Warrior guerrier, int invest);
-    public abstract void effetFinDeTour(Scanner sc, Warrior warrior);
+    public abstract void effetFinDeTour( Warrior warrior);
 
     public abstract  String getMoveDesc();
     public abstract  String getMoveDesc2();

@@ -35,7 +35,7 @@ public class ListDialTuto {
         if(avancement == 1){
             return "Par contre nous allons choisir sa technique de départ";
         } else if( avancement == 2){
-            return "Choix 1 : " + warrior.getArts().get(0).getName();
+            return "Choix 1 : " + "Attaque furieuse";
         } else if( avancement == 3){
             return warrior.getArtsLearned().get(0).getName();
         }else if( avancement == 4){
@@ -63,7 +63,7 @@ public class ListDialTuto {
         if(avancement == 1){
             return " ";
         } else if( avancement == 2){
-            return "Choix 2 : " + warrior.getArts().get(1).getName();
+            return "Choix 2 : " + "Attaque prudente";
         } else if( avancement == 3){
             return " ";
         }else if( avancement == 4){
