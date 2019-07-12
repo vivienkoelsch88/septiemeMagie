@@ -1,6 +1,6 @@
 package Monstre;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public class Orc extends Monstre{
 

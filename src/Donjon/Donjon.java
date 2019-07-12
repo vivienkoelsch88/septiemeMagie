@@ -1,6 +1,6 @@
 package Donjon;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 import java.util.ArrayList;
 import java.util.Scanner;

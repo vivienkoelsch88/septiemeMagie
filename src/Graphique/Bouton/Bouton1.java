@@ -1,7 +1,6 @@
 package Graphique.Bouton;
 
-import Graphique.Combat;
-import Graphique.Fenetre;
+import Graphique.Tuto.Combat;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

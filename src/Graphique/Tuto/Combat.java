@@ -1,12 +1,13 @@
-package Graphique;
+package Graphique.Tuto;
 
-import Glob.Techniques;
-import Glob.Warrior;
+import CartesGuerrier.Techniques;
+import Graphique.Fenetre;
+import Graphique.Tuto.ListDial.ListDialCombat;
+import Personnages.Warrior;
 import Graphique.Bouton.Bouton1;
 import Graphique.Bouton.Bouton2;
 import Graphique.Bouton.Bouton3;
 import Monstre.Monstre;
-import javafx.scene.layout.Background;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -18,7 +19,6 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.GraphicsEnvironment;
 
 public class Combat extends JPanel implements MouseListener, ActionListener {
     private Warrior warrior;
@@ -163,6 +163,9 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
                 ligne2 = "Le gobelin tombe sous vos coups, bien joué!";
                 ligne3 = "";
                 repaint();
+                continu++;
+            }if (continu == 11) {
+                this.fen.CreationPersonnage();
             }
         }
 
@@ -350,4 +353,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 
     }
 
+    public Warrior getWarrior() {
+        return warrior;
+    }
 }

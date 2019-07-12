@@ -1,7 +1,6 @@
 package CartesGuerrier;
 
-import Glob.Techniques;
-import Glob.Warrior;
+import Personnages.Warrior;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package Graphique;
+package Graphique.Tuto.ListDial;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public class ListDialTuto {
 

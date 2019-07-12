@@ -2,7 +2,7 @@ package Aventure1;
 
 import Aventure1.Bestiaire.Voleur;
 import Combat.CombatSimple;
-import Glob.Warrior;
+import Personnages.Warrior;
 
 import java.util.Scanner;
 

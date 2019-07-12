@@ -1,6 +1,6 @@
 package Aventure1;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 import java.util.Scanner;
 

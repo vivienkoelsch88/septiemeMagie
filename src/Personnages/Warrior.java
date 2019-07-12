@@ -1,5 +1,8 @@
-package Glob;
+package Personnages;
 
+import CartesGuerrier.ArtMartiaux;
+import CartesGuerrier.Techniques;
+import Glob.Adversaire;
 import Monstre.Monstre;
 import Monstre.Orc;
 

@@ -1,8 +1,10 @@
-package Graphique;
+package Graphique.Tuto;
 
-import Glob.ArtMartiaux;
-import Glob.Guerrier;
-import Glob.Warrior;
+import CartesGuerrier.ArtMartiaux;
+import Graphique.Fenetre;
+import Graphique.Tuto.ListDial.ListDialTuto;
+import Personnages.Guerrier;
+import Personnages.Warrior;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

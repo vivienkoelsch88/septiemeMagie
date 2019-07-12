@@ -1,9 +1,11 @@
 package Glob;
 
-import Aventure1.Aventure;
 import CartesGuerrier.*;
-import Donjon.Donjon;
+import CartesGuerrier.ArtMartiaux;
+import CartesGuerrier.Attaque;
+import CartesGuerrier.Techniques;
 import Graphique.Fenetre;
+import Personnages.Warrior;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,6 +1,6 @@
 package Combat;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 import Monstre.Monstre;
 
 import java.util.Scanner;

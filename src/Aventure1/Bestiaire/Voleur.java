@@ -1,6 +1,6 @@
 package Aventure1.Bestiaire;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 import Monstre.Monstre;
 
 public class Voleur extends Monstre {

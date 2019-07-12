@@ -1,7 +1,7 @@
 package Donjon;
 
 import Combat.CombatSimple;
-import Glob.Warrior;
+import Personnages.Warrior;
 import Monstre.Monstre;
 import Monstre.Orc;
 

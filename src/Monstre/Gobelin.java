@@ -1,6 +1,6 @@
 package Monstre;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public class Gobelin extends  Monstre{
     public Gobelin() {

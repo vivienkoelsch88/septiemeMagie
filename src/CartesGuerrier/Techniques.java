@@ -1,4 +1,6 @@
-package Glob;
+package CartesGuerrier;
+
+import Personnages.Warrior;
 
 import java.util.Scanner;
 

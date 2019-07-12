@@ -1,8 +1,11 @@
-package Glob;
+package CartesGuerrier;
+
+import CartesGuerrier.Techniques;
+import Personnages.Warrior;
 
 import java.util.Scanner;
 
-public class ArtMartiaux extends Techniques{
+public class ArtMartiaux extends Techniques {
     private String MoveDesc = "";
     private String MoveDesc2 = "";
     private String MoveDesc3 = "";

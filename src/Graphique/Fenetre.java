@@ -1,5 +1,8 @@
 package Graphique;
 
+import Graphique.Tuto.Combat;
+import Graphique.Tuto.CreationPersonnage;
+import Graphique.Tuto.Tuto;
 import Monstre.*;
 
 import java.awt.event.ActionEvent;
@@ -13,6 +16,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     private Tuto pan = new Tuto(this);
     private Combat panCombat = new Combat(this);
+    private CreationPersonnage panCreation = new CreationPersonnage(this);
     private String actif;
 
     public Fenetre(){
@@ -55,6 +59,19 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         this.getContentPane().revalidate();
     }
 
+    public void CreationPersonnage(){
+        this.setContentPane(panCreation);
+        this.actif = "panCreationPersonnage";
+        panCreation.setImageDeFond("tuto.jpg");
+        panCreation.setPersoDroite("narrateur.png");
+        panCreation.setLigne1("");
+        panCreation.setLigne2("Il est maintenant temps de créer votre premier personnage");
+        panCreation.setLigne3("");
+
+        panCreation.repaint();
+        this.getContentPane().revalidate();
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -69,6 +86,8 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
                 panCombat.keyPressed(e);
             } catch (InterruptedException e1) {
             }
+        } else if (this.actif.equals("panCreationPersonnage")){
+                panCreation.keyPressed(e);
         }
 
 

@@ -1,4 +1,7 @@
-package Glob;
+package Personnages;
+
+import CartesGuerrier.ArtMartiaux;
+import CartesGuerrier.Techniques;
 
 import java.util.ArrayList;
 import java.util.Scanner;

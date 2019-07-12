@@ -1,6 +1,6 @@
-package Graphique;
+package Graphique.Tuto.ListDial;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public class ListDialCombat {
     public String dial1(int avancement, Warrior warrior){

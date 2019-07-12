@@ -1,6 +1,6 @@
 package Monstre;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public abstract class Monstre {
     private String name;

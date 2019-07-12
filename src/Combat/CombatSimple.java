@@ -1,7 +1,7 @@
 package Combat;
 
-import Glob.Techniques;
-import Glob.Warrior;
+import CartesGuerrier.Techniques;
+import Personnages.Warrior;
 import Monstre.Monstre;
 
 import java.util.ArrayList;

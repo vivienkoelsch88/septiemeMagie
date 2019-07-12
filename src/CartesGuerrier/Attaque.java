@@ -1,8 +1,11 @@
-package Glob;
+package CartesGuerrier;
+
+import CartesGuerrier.Techniques;
+import Personnages.Warrior;
 
 import java.util.Scanner;
 
-public class Attaque extends Techniques{
+public class Attaque extends Techniques {
 
 
     public Attaque() {
