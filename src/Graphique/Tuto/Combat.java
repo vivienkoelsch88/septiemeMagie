@@ -156,7 +156,8 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
             }
             if (continu == 7) {
                 riposteDuMonstre();
-                continu++;
+                this.warrior.resetBonus();
+                this.monstre.resetBonus();
             }
             if (continu == 10) {
                 ligne1 = "";
@@ -292,7 +293,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         this.ligne2 = this.monstre.getMoveDesc2();
         this.ligne3 = this.monstre.getMoveDesc3();
         repaint();
-        continu = 2;
+        continu = 3;
     }
 
 

@@ -85,7 +85,7 @@ public class ArtMartiaux extends Techniques {
         System.out.println("Qui veut voyager loin ménage sa monture hein?");
         this.MoveDesc2 = "Qui veut voyager loin ménage sa monture hein?";
         guerrier.setAttaqueBonus(invest * -1);
-        guerrier.setDefenseBonus(invest);
+        guerrier.setDefenseBonus(invest * 2);
         guerrier.perteEndurance(invest);
         this.MoveDesc = "";
         this.MoveDesc3 = "";
@@ -94,16 +94,12 @@ public class ArtMartiaux extends Techniques {
     private void riposte(Warrior guerrier, int invest){
         System.out.println("Bien, vous vous campez sur vos jambes, prêt à contrattaquer...");
         this.MoveDesc = "Bien, vous vous campez sur vos jambes, prêt à contrattaquer...";
-        if(
-//                guerrier.getAdversaires().getNextMoveType().equals("Attaque") ||
-                        guerrier.getMonstre().getNextMoveType().equals("Attaque")){
-            System.out.println("et d'une fente magistrale, vous surprenez votre adversaire au moment où celui-ci vous attaque");
+        if(guerrier.getMonstre().getNextMoveType().equals("Attaque")){
             this.MoveDesc2 = "et d'une fente magistrale, vous surprenez votre adversaire au moment où celui-ci vous attaque";
             guerrier.setAttaqueBonus(invest * 3);
             guerrier.setDefenseBonus(invest);
 
         } else {
-            System.out.println("Mais l'attaque se fait attendre... dommage");
             this.MoveDesc2 = "Mais l'attaque se fait attendre... dommage";
             guerrier.setAttaqueBonus(invest * -1);
             guerrier.setDefenseBonus(invest);
@@ -118,9 +114,7 @@ public class ArtMartiaux extends Techniques {
         guerrier.setAttaqueBonus(guerrier.getAttaque() * -1);
         guerrier.setDefenseBonus(invest + guerrier.getDefense());
         guerrier.perteEndurance(invest);
-        if(
-//                guerrier.getAdversaires().getNextMoveType().equals("Distance") ||
-                        guerrier.getMonstre().getNextMoveType().equals("Distance")){
+        if(guerrier.getMonstre().getNextMoveType().equals("Distance")){
             guerrier.setDefenseBonus(invest);
         }
         this.MoveDesc = "";
@@ -136,23 +130,11 @@ public class ArtMartiaux extends Techniques {
         return MoveDesc;
     }
 
-    public void setMoveDesc(String moveDesc) {
-        MoveDesc = moveDesc;
-    }
-
     public String getMoveDesc2() {
         return MoveDesc2;
     }
 
-    public void setMoveDesc2(String moveDesc2) {
-        MoveDesc2 = moveDesc2;
-    }
-
     public String getMoveDesc3() {
         return MoveDesc3;
-    }
-
-    public void setMoveDesc3(String moveDesc3) {
-        MoveDesc3 = moveDesc3;
     }
 }

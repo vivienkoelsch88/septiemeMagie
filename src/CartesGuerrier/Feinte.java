@@ -17,7 +17,7 @@ public class Feinte extends Techniques{
     @Override
     public void utilisation(Warrior guerrier, int invest) {
         System.out.println("J'attaque de gauche à droite... ou pas :p");
-        if(guerrier.getAdversaires().getNextMoveType().equals("Défense")){
+        if(guerrier.getMonstre().getNextMoveType().equals("Défense")){
             guerrier.setAttaqueBonus(invest * 4);
         } else {
             guerrier.setDefenseBonus(invest * -1);

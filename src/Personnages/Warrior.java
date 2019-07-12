@@ -2,7 +2,6 @@ package Personnages;
 
 import CartesGuerrier.ArtMartiaux;
 import CartesGuerrier.Techniques;
-import Glob.Adversaire;
 import Monstre.Monstre;
 import Monstre.Orc;
 
@@ -18,7 +17,6 @@ public abstract class Warrior {
     private int force;
     private int adresse;
     private int charisme;
-    private Adversaire adversaires;
     private Monstre monstre;
     private boolean faiblesse = false;
 
@@ -130,14 +128,6 @@ public abstract class Warrior {
 
     public void setDefenseBonus(int defenseBonus) {
         this.defenseBonus = defenseBonus;
-    }
-
-    public Adversaire getAdversaires() {
-        return adversaires;
-    }
-
-    public void setAdversaires(Adversaire adversaires) {
-        this.adversaires = adversaires;
     }
 
     public ArrayList<Techniques> listCarte(){
