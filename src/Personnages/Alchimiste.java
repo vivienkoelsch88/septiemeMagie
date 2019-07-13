@@ -4,16 +4,14 @@ import CartesGuerrier.Techniques;
 
 import java.util.ArrayList;
 
-public class Guerrier extends Warrior {
-    private int endurance;
-    private String classe = "         Chevalier";
+public class Alchimiste extends Warrior {
+    private String classe = "         Alchimiste";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "fondEcranGuerrier.jpg";
+    private String fondEcran = "fondEcranAlchimiste.jpg";
     private String[] desc;
 
-    public Guerrier() {
-        super(50, 18, 6);
-        this.endurance = 100;
+    public Alchimiste() {
+        super(50, 12, 5);
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -32,6 +30,32 @@ public class Guerrier extends Warrior {
         };
     }
 
+    //    ********************************************************
+    @Override
+    public void setArtsLearned(Techniques artsLearned) {
+        this.artsLearned.add(artsLearned);
+    }
+
+    @Override
+    public ArrayList<Techniques> getArtsLearned() {
+        return this.artsLearned;
+    }
+
+    @Override
+    public int getRessource() {
+        return 0;
+    }
+
+    @Override
+    public void setRessource(int endurance) {
+
+    }
+
+    @Override
+    public void perteRessource(int perte) {
+
+    }
+
     @Override
     public ArrayList<Techniques> getDeck() {
         ArrayList<Techniques> deck = super.listCarte();
@@ -41,30 +65,7 @@ public class Guerrier extends Warrior {
         return deck;
     }
 
-    public int getRessource() {
-        return endurance;
-    }
-
-    public void setRessource(int endurance) {
-        this.endurance = endurance;
-    }
-
-    public ArrayList<Techniques> getArtsLearned() {
-        return artsLearned;
-    }
-
-    public void setArtsLearned(Techniques artsLearned) {
-        this.artsLearned.add(artsLearned);
-    }
-
-    public void perteRessource(int perte){
-        this.endurance = this.endurance - perte;
-        if(this.endurance < 0){
-            super.setLife(super.getLife() + this.endurance);
-            this.endurance = 0;
-        }
-    }
-
+    @Override
     public String getFondEcran() {
         return fondEcran;
     }

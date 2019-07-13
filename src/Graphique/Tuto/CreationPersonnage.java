@@ -25,10 +25,10 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     private String ligne3 = "";
     private int zoneText = 0;
     private String text;
-    private int continu = 1;
+    private int continu = 0;
     private ListDialCreationDePersonnage dial;
     private int tailleLigne1 = 0;
-    private int tailleLigne2 = 57;
+    private int tailleLigne2 = 0;
     private int tailleLigne3 = 0;
     private Timer timer = new Timer(1, new ActionListener() {
         @Override
@@ -105,7 +105,15 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     @Override
     public void mousePressed(MouseEvent e) {
         switch (continu){
-            case 1 :
+            case 0:
+                tailleLigne1 = ligne1.length();
+                tailleLigne2 = ligne2.length();
+                tailleLigne3 = ligne3.length();
+                timer.stop();
+                continu++;
+
+            case 1:
+                timer.stop();
                 tailleLigne1 = 0;
                 tailleLigne2 = 0;
                 tailleLigne3 = 0;
@@ -118,18 +126,12 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                 break;
 
             case 2 :
-                if(tailleLigne1 < ligne1.length()){
+
                     tailleLigne1 = ligne1.length();
-                    timer.stop();
-                }
-                if(tailleLigne2 < ligne2.length()) {
                     tailleLigne2 = ligne2.length();
-                    timer.stop();
-                }
-                if(tailleLigne3 < ligne3.length()) {
                     tailleLigne3 = ligne3.length();
                     timer.stop();
-                }
+
                 afficherListePersonnages(this.getGraphics());
                 repaint();
         }
@@ -141,8 +143,8 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
             JPanel panel = new JPanel();
             panel.setLayout(new FlowLayout());
             JButton bouton;
-            for( int i = 0; i < 2; i++) {
-                if(i > 2){
+            for( int i = 0; i < 4; i++) {
+                if(i > 3){
                     placement = 190;
                 }
                 switch (i) {
@@ -161,6 +163,24 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
                         bouton.setIcon(new ImageIcon("iconRunique.png"));
+                        this.add(bouton);
+                        break;
+
+                    case 2 :
+
+                        bouton = new JButton(new Bouton1CreationPersonnage("Ensorceleuse"));
+                        bouton.addActionListener(this);
+                        bouton.setBounds(5 + i * 125, placement , 115, 150);
+                        bouton.setIcon(new ImageIcon("iconEnsorceleuse.png"));
+                        this.add(bouton);
+                        break;
+
+                    case 3 :
+
+                        bouton = new JButton(new Bouton1CreationPersonnage("Alchimiste"));
+                        bouton.addActionListener(this);
+                        bouton.setBounds(5 + i * 125, placement , 115, 150);
+                        bouton.setIcon(new ImageIcon("iconAlchimiste.png"));
                         this.add(bouton);
                         break;
                 }
@@ -211,6 +231,10 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
 
     public void setLigne3(String ligne3) {
         this.ligne3 = ligne3;
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 
     @Override

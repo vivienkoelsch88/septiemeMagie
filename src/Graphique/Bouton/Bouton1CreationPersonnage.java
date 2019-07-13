@@ -2,9 +2,7 @@ package Graphique.Bouton;
 
 import Graphique.Fenetre;
 import Graphique.Tuto.FenetreWarriors;
-import Personnages.Guerrier;
-import Personnages.MaitreDesRunes;
-import Personnages.Warrior;
+import Personnages.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -30,6 +28,18 @@ public class Bouton1CreationPersonnage extends AbstractAction {
             case "MaitreRune" :
                 MaitreDesRunes maitreDesRunes = new MaitreDesRunes();
                 fen = new FenetreWarriors(maitreDesRunes);
+                this.fen = fen;
+                break;
+
+            case "Ensorceleuse" :
+                Ensorceleuse ensorceleuse = new Ensorceleuse();
+                fen = new FenetreWarriors(ensorceleuse);
+                this.fen = fen;
+                break;
+
+            case "Alchimiste" :
+                Alchimiste alchimiste = new Alchimiste();
+                fen = new FenetreWarriors(alchimiste);
                 this.fen = fen;
                 break;
         }

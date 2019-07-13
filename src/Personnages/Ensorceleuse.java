@@ -4,16 +4,16 @@ import CartesGuerrier.Techniques;
 
 import java.util.ArrayList;
 
-public class Guerrier extends Warrior {
-    private int endurance;
-    private String classe = "         Chevalier";
+public class Ensorceleuse extends Warrior {
+    private int aura;
+    private String classe = "        Ensorceleuse";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "fondEcranGuerrier.jpg";
+    private String fondEcran = "fondEcranEnsorceleuse.jpg";
     private String[] desc;
 
-    public Guerrier() {
-        super(50, 18, 6);
-        this.endurance = 100;
+    public Ensorceleuse() {
+        super(40, 12, 6);
+        this.aura = 100;
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -32,6 +32,36 @@ public class Guerrier extends Warrior {
         };
     }
 
+    //    *******************************************************************************************
+    @Override
+    public void setArtsLearned(Techniques artsLearned) {
+        this.artsLearned.add(artsLearned);
+    }
+
+    @Override
+    public ArrayList<Techniques> getArtsLearned() {
+        return artsLearned;
+    }
+
+    @Override
+    public int getRessource() {
+        return aura;
+    }
+
+    @Override
+    public void setRessource(int endurance) {
+        this.aura = endurance;
+    }
+
+    @Override
+    public void perteRessource(int perte) {
+        this.aura = this.aura - perte;
+        if(this.aura < 0){
+            super.setLife(super.getLife() + this.aura);
+            this.aura = 0;
+        }
+    }
+
     @Override
     public ArrayList<Techniques> getDeck() {
         ArrayList<Techniques> deck = super.listCarte();
@@ -41,30 +71,7 @@ public class Guerrier extends Warrior {
         return deck;
     }
 
-    public int getRessource() {
-        return endurance;
-    }
-
-    public void setRessource(int endurance) {
-        this.endurance = endurance;
-    }
-
-    public ArrayList<Techniques> getArtsLearned() {
-        return artsLearned;
-    }
-
-    public void setArtsLearned(Techniques artsLearned) {
-        this.artsLearned.add(artsLearned);
-    }
-
-    public void perteRessource(int perte){
-        this.endurance = this.endurance - perte;
-        if(this.endurance < 0){
-            super.setLife(super.getLife() + this.endurance);
-            this.endurance = 0;
-        }
-    }
-
+    @Override
     public String getFondEcran() {
         return fondEcran;
     }
@@ -78,4 +85,5 @@ public class Guerrier extends Warrior {
     public String[] getDesc() {
         return desc;
     }
+
 }

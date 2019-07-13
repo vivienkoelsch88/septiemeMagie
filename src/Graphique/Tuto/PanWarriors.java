@@ -27,7 +27,7 @@ public class PanWarriors  extends JPanel implements MouseListener, ActionListene
             e.printStackTrace();
         }
 
-        g.setColor(new Color(142, 162, 198,150));
+        g.setColor(new Color(142, 162, 198,180));
         g.fillRoundRect(5 , 5, 500, 650, 15, 15);
 
         Font font = new Font("desc", Font.BOLD, 35);

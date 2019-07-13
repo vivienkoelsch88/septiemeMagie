@@ -64,11 +64,11 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         this.actif = "panCreationPersonnage";
         panCreation.setImageDeFond("tuto.jpg");
         panCreation.setPersoDroite("narrateur.png");
-        panCreation.setLigne1("                    ");
+        panCreation.setLigne1("");
         panCreation.setLigne2("Il est maintenant temps de créer votre premier personnage");
-        panCreation.setLigne3("                  ");
+        panCreation.setLigne3("");
 
-        panCreation.repaint();
+        panCreation.getTimer().start();
         this.getContentPane().revalidate();
     }
 
