@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Alchimiste extends Warrior {
     private String classe = "         Alchimiste";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "fondEcranAlchimiste.jpg";
+    private String fondEcran = "img/fondEcranAlchimiste.jpg";
     private String[] desc;
 
     public Alchimiste() {

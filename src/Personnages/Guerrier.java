@@ -8,7 +8,7 @@ public class Guerrier extends Warrior {
     private int endurance;
     private String classe = "         Chevalier";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "fondEcranGuerrier.jpg";
+    private String fondEcran = "img/fondEcranGuerrier.jpg";
     private String[] desc;
 
     public Guerrier() {

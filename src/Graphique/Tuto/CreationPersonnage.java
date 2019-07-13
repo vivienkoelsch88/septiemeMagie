@@ -62,7 +62,6 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                 repaint();
             } else {
                 timer.stop();
-                continu++;
             }
 
 
@@ -153,7 +152,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Guerrier"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("iconGuerrier.png"));
+                        bouton.setIcon(new ImageIcon("img/iconGuerrier.png"));
                         this.add(bouton);
                     break;
 
@@ -162,7 +161,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("MaitreRune"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("iconRunique.png"));
+                        bouton.setIcon(new ImageIcon("img/iconRunique.png"));
                         this.add(bouton);
                         break;
 
@@ -171,7 +170,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Ensorceleuse"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("iconEnsorceleuse.png"));
+                        bouton.setIcon(new ImageIcon("img/iconEnsorceleuse.png"));
                         this.add(bouton);
                         break;
 
@@ -180,7 +179,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Alchimiste"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("iconAlchimiste.png"));
+                        bouton.setIcon(new ImageIcon("img/iconAlchimiste.png"));
                         this.add(bouton);
                         break;
                 }

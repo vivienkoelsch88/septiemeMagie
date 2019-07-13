@@ -8,7 +8,7 @@ public class Ensorceleuse extends Warrior {
     private int aura;
     private String classe = "        Ensorceleuse";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "fondEcranEnsorceleuse.jpg";
+    private String fondEcran = "img/fondEcranEnsorceleuse.jpg";
     private String[] desc;
 
     public Ensorceleuse() {
