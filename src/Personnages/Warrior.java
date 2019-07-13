@@ -179,12 +179,14 @@ public abstract class Warrior {
     }
 
     public abstract void setArtsLearned(ArtMartiaux artsLearned);
-    public abstract ArrayList<ArtMartiaux> getArtsLearned();
-    public abstract int getEndurance();
-    public abstract void setEndurance(int endurance);
-    public abstract void perteEndurance(int perte);
+    public abstract ArrayList<Techniques> getArtsLearned();
+    public abstract int getRessource();
+    public abstract void setRessource(int endurance);
+    public abstract void perteRessource(int perte);
     public abstract ArrayList<Techniques> getDeck();
     public abstract String getFondEcran();
+    public abstract String getClasse();
+    public abstract String[] getDesc();
 
     public void resetBonus (){
         this.attaqueBonus = 0;

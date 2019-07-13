@@ -18,7 +18,7 @@ public class BriseCoude extends Techniques{
         System.out.println("Bon, pour une fois, on ne vise pas la tête..." + "\n" +
                 "Si si c'est bien aussi");
         guerrier.getMonstre().setFaiblesse(true);
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
     }
 
     @Override

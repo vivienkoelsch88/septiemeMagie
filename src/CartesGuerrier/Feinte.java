@@ -20,7 +20,7 @@ public class Feinte extends Techniques{
         } else {
             guerrier.setDefenseBonus(invest * -1);
         }
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
     }
 
     @Override

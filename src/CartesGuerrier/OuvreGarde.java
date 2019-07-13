@@ -15,7 +15,7 @@ public class OuvreGarde extends Techniques{
     @Override
     public void utilisation(Warrior guerrier, int invest) {
         System.out.println("Tient? Si je frappe trés fort dans son casque il n'aime pas... Bon, moi oui");
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         guerrier.setAttaqueBonus(invest);
         guerrier.pioche();
     }

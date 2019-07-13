@@ -20,7 +20,7 @@ public class ChangementDePosition extends Techniques {
                 "Mmmh... c'est dangereux, vous relevez votre bouclier et levez votre arme");
         guerrier.setAttaqueBonus(guerrier.getAttaque() * -1);
         guerrier.setDefenseBonus(guerrier.getConcentration()/5);
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         guerrier.pioche();
     }
 

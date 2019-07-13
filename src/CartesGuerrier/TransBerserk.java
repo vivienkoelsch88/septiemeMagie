@@ -22,7 +22,7 @@ public class TransBerserk extends Techniques{
 
     @Override
     public void effetFinDeTour(Warrior warrior) {
-        warrior.setEndurance(warrior.getEndurance() + 5);
+        warrior.setRessource(warrior.getRessource() + 5);
     }
 
     @Override

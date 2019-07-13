@@ -94,7 +94,7 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         g.drawString("Adresse : " + this.warrior.getAdresse(), 15, 50);
         g.drawString("Charisme : " + this.warrior.getCharisme(), 15, 70);
         g.drawString("Force : " + this.warrior.getForce(), 15, 90);
-        g.drawString("Endurance : " + this.warrior.getEndurance(), 15, 110);
+        g.drawString("Endurance : " + this.warrior.getRessource(), 15, 110);
         g.drawString("Attaque : " + this.warrior.getAttaque() + "  Défense : " + this.warrior.getDefense(), 15, 130);
         g.drawString("Vie : " + this.warrior.getLife(), 15, 150);
 

@@ -66,7 +66,7 @@ public class ArtMartiaux extends Techniques {
         this.MoveDesc2 = "Vous vous ruez donc sur votre adversaire, les yeux rouges et une envie de meurtre dans les yeux...";
         guerrier.setAttaqueBonus(invest *2);
         guerrier.setDefenseBonus(invest);
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         this.MoveDesc = "";
         this.MoveDesc3 = "";
     }
@@ -75,7 +75,7 @@ public class ArtMartiaux extends Techniques {
         this.MoveDesc2 = "Qui veut voyager loin ménage sa monture hein?";
         guerrier.setAttaqueBonus(invest * -1);
         guerrier.setDefenseBonus(invest * 2);
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         this.MoveDesc = "";
         this.MoveDesc3 = "";
     }
@@ -92,7 +92,7 @@ public class ArtMartiaux extends Techniques {
             guerrier.setAttaqueBonus(invest * -1);
             guerrier.setDefenseBonus(invest);
         }
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         this.MoveDesc3 = "";
     }
 
@@ -100,7 +100,7 @@ public class ArtMartiaux extends Techniques {
         this.MoveDesc2 = "Oui vous portez une armure, mais une esquive ce n'est pas obligatoirement un salto arrière vous savez?";
         guerrier.setAttaqueBonus(guerrier.getAttaque() * -1);
         guerrier.setDefenseBonus(invest + guerrier.getDefense());
-        guerrier.perteEndurance(invest);
+        guerrier.perteRessource(invest);
         if(guerrier.getMonstre().getNextMoveType().equals("Distance")){
             guerrier.setDefenseBonus(invest);
         }

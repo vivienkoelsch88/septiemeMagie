@@ -80,6 +80,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
             this.setLayout(null);
             JPanel panel = new JPanel();
             panel.setLayout(new FlowLayout());
+            JButton bouton;
             for( int i = 0; i < 2; i++) {
                 if(i > 2){
                     placement = 190;
@@ -87,13 +88,21 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                 switch (i) {
                     case 0 :
 
-                        JButton bouton = new JButton(new Bouton1CreationPersonnage("Guerrier"));
+                        bouton = new JButton(new Bouton1CreationPersonnage("Guerrier"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
                         bouton.setIcon(new ImageIcon("iconGuerrier.png"));
                         this.add(bouton);
                     break;
 
+                    case 1 :
+
+                        bouton = new JButton(new Bouton1CreationPersonnage("MaitreRune"));
+                        bouton.addActionListener(this);
+                        bouton.setBounds(5 + i * 125, placement , 115, 150);
+                        bouton.setIcon(new ImageIcon("iconRunique.png"));
+                        this.add(bouton);
+                        break;
                 }
             }
 

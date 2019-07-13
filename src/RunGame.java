@@ -9,6 +9,7 @@ public class RunGame{
         Fenetre fen = new Fenetre();
 
         fen.tuto();
+//        fen.CreationPersonnage();
     }
 
 }

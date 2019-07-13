@@ -27,9 +27,32 @@ public class PanWarriors  extends JPanel implements MouseListener, ActionListene
             e.printStackTrace();
         }
 
-        g.setColor(new Color(142, 162, 198,60));
+        g.setColor(new Color(142, 162, 198,150));
         g.fillRoundRect(5 , 5, 500, 650, 15, 15);
+
+        Font font = new Font("desc", Font.BOLD, 35);
+        g.setFont(font);
         g.setColor((Color.WHITE));
+        g.drawString(warrior.getClasse(), 180, 40);
+
+        font = new Font("desc", Font.BOLD, 33);
+        g.setFont(font);
+        g.drawString("Description : ", 150, 200);
+
+        font = new Font("desc", Font.BOLD, 25);
+        g.setFont(font);
+        g.drawString("Vie : " + warrior.getLife(), 30, 80);
+        g.drawString("Attaque : " + warrior.getAttaque(), 30, 110);
+        g.drawString("Défense : " + warrior.getDefense(), 30, 140);
+
+        font = new Font("desc", Font.BOLD, 15);
+        g.setFont(font);
+        int compteur = 250;
+        for (String line : warrior.getDesc()
+             ) {
+            g.drawString(line, 30, compteur);
+            compteur = compteur + 20;
+        }
     }
 
     @Override

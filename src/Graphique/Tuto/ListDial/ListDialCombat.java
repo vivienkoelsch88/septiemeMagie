@@ -68,7 +68,7 @@ public class ListDialCombat {
         }else if( avancement == 4){
             return "";
         } else if( avancement == 5){
-            return "Les guerrier possèdent " + warrior.getEndurance() + " points d'endurance";
+            return "Les guerrier possèdent " + warrior.getRessource() + " points d'endurance";
         } else if( avancement == 6){
             return "";
         }  else if( avancement == 7){
