@@ -5,11 +5,11 @@ import Graphique.Tuto.Combat;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class Bouton3 extends AbstractAction {
+public class Bouton3CombatTuto extends AbstractAction {
     private String name;
     private Combat combat;
 
-    public Bouton3(String texte, Combat combat){
+    public Bouton3CombatTuto(String texte, Combat combat){
         super(texte);
         this.name = "Carte 3";
         this.combat = combat;

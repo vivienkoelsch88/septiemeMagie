@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Guerrier extends Warrior {
     private int endurance;
     private ArrayList<ArtMartiaux> artsLearned = new ArrayList<>();
+    private String fondEcran = "fondEcranGuerrier.jpg";
 
     public Guerrier() {
         super(50, 18, 6);
@@ -48,5 +49,7 @@ public class Guerrier extends Warrior {
         }
     }
 
-
+    public String getFondEcran() {
+        return fondEcran;
+    }
 }

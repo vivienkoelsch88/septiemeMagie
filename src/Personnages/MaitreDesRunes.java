@@ -40,4 +40,9 @@ public class MaitreDesRunes extends Warrior {
     public ArrayList<Techniques> getDeck() {
         return null;
     }
+
+    @Override
+    public String getFondEcran() {
+        return null;
+    }
 }

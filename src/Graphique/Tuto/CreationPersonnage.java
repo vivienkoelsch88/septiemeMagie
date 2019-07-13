@@ -1,5 +1,7 @@
 package Graphique.Tuto;
 
+import Graphique.Bouton.Bouton1CombatTuto;
+import Graphique.Bouton.Bouton1CreationPersonnage;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCreationDePersonnage;
 import Personnages.Guerrier;
@@ -8,13 +10,13 @@ import Personnages.Warrior;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 
-public class CreationPersonnage  extends JPanel implements MouseListener {
+import static javax.swing.text.StyleConstants.setIcon;
+
+public class CreationPersonnage  extends JPanel implements MouseListener, ActionListener {
     private Fenetre fen;
     private Warrior warrior;
     private String imageDeFond = "";
@@ -68,25 +70,30 @@ public class CreationPersonnage  extends JPanel implements MouseListener {
                 this.ligne3 = dial.dial3(continu, this.warrior);
                 this.continu++;
                 afficherListePersonnages(this.getGraphics());
-//                repaint();
-//                revalidate();
+                repaint();
                 break;
         }
     }
 
     private void afficherListePersonnages(Graphics g){
             int placement = 30;
-            for( int i = 0; i < 1; i++) {
+            this.setLayout(null);
+            JPanel panel = new JPanel();
+            panel.setLayout(new FlowLayout());
+            for( int i = 0; i < 2; i++) {
                 if(i > 2){
                     placement = 190;
                 }
-                g.setColor((Color.GRAY));
-                g.fillRoundRect(5 + i * 125, placement, 115, 150, 5, 5);
-                g.setColor((Color.WHITE));
                 switch (i) {
                     case 0 :
-                    g.drawString("Guerrier", 15 + i * 125, placement + 75);
+
+                        JButton bouton = new JButton(new Bouton1CreationPersonnage("Guerrier"));
+                        bouton.addActionListener(this);
+                        bouton.setBounds(5 + i * 125, placement , 115, 150);
+                        bouton.setIcon(new ImageIcon("iconGuerrier.png"));
+                        this.add(bouton);
                     break;
+
                 }
             }
 
@@ -158,5 +165,10 @@ public class CreationPersonnage  extends JPanel implements MouseListener {
     }
 
     public void keyPressed(KeyEvent e) {
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }

@@ -184,6 +184,7 @@ public abstract class Warrior {
     public abstract void setEndurance(int endurance);
     public abstract void perteEndurance(int perte);
     public abstract ArrayList<Techniques> getDeck();
+    public abstract String getFondEcran();
 
     public void resetBonus (){
         this.attaqueBonus = 0;

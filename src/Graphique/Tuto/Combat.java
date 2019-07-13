@@ -4,9 +4,9 @@ import CartesGuerrier.Techniques;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCombat;
 import Personnages.Warrior;
-import Graphique.Bouton.Bouton1;
-import Graphique.Bouton.Bouton2;
-import Graphique.Bouton.Bouton3;
+import Graphique.Bouton.Bouton1CombatTuto;
+import Graphique.Bouton.Bouton2CombatTuto;
+import Graphique.Bouton.Bouton3CombatTuto;
 import Monstre.Monstre;
 
 import java.awt.*;
@@ -192,17 +192,17 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
         this.setLayout(null);
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JButton bouton = new JButton(new Bouton1("Choisir", this));
+        JButton bouton = new JButton(new Bouton1CombatTuto("Choisir", this));
         bouton.addActionListener(this);
         bouton.setBounds(35, 345, 50, 20);
         this.add(bouton);
 
-        JButton bouton2 = new JButton(new Bouton2("Choisir", this));
+        JButton bouton2 = new JButton(new Bouton2CombatTuto("Choisir", this));
         bouton2.addActionListener(this);
         bouton2.setBounds(160, 345, 50, 20);
         this.add(bouton2);
 
-        JButton bouton3 = new JButton(new Bouton3("Choisir", this));
+        JButton bouton3 = new JButton(new Bouton3CombatTuto("Choisir", this));
         bouton3.addActionListener(this);
         bouton3.setBounds(285, 345, 50, 20);
         this.add(bouton3);
