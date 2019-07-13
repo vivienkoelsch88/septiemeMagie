@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="7Magie:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/7Magie_jar</output-path>
+    <root id="archive" name="7Magie.jar">
+      <element id="module-output" name="7Magie" />
+    </root>
+  </artifact>
+</component>

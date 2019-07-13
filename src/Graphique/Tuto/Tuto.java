@@ -15,7 +15,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class Tuto extends JPanel implements MouseListener {
+public class Tuto extends JComponent implements MouseListener {
     private String imageDeFond = "";
     private String ligne1 = "";
     private String ligne2 = "";
@@ -38,15 +38,11 @@ public class Tuto extends JPanel implements MouseListener {
 
     public void paintComponent(Graphics g){
 
-        try {
-            Image img = ImageIO.read(new File(imageDeFond));
-            g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+        Image img = new javax.swing.ImageIcon(getClass().getResource(imageDeFond)).getImage();
+        g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
-            Image img2 = ImageIO.read(new File(persoDroite));
-            g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Image img2 = new javax.swing.ImageIcon(getClass().getResource(persoDroite)).getImage();
+        g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
         g.fillRoundRect(0, this.getHeight()-130, this.getWidth(), 100, 5, 5);
         Font font = new Font("desc", Font.BOLD, 12);
         g.setFont(font);

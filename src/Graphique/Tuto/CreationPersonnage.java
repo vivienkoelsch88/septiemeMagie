@@ -15,7 +15,7 @@ import java.io.IOException;
 
 import static javax.swing.text.StyleConstants.setIcon;
 
-public class CreationPersonnage  extends JPanel implements MouseListener, ActionListener {
+public class CreationPersonnage  extends JComponent implements MouseListener, ActionListener {
     private Fenetre fen;
     private Warrior warrior;
     private String imageDeFond = "";
@@ -30,7 +30,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     private int tailleLigne1 = 0;
     private int tailleLigne2 = 0;
     private int tailleLigne3 = 0;
-    private Timer timer = new Timer(1, new ActionListener() {
+    private Timer timer = new Timer(50, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (ligne1.length() > tailleLigne1) {
@@ -77,15 +77,12 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     }
 
     public void paintComponent(Graphics g){
-        try {
-            Image img = ImageIO.read(new File(imageDeFond));
-            g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+        super.paintComponent(g);
+        Image img = new javax.swing.ImageIcon(getClass().getResource(imageDeFond)).getImage();
+        g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
-            Image img2 = ImageIO.read(new File(persoDroite));
-            g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Image img2 = new javax.swing.ImageIcon(getClass().getResource(persoDroite)).getImage();
+        g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
         g.fillRoundRect(0, this.getHeight()-130, this.getWidth(), 100, 5, 5);
         Font font = new Font("desc", Font.BOLD, 12);
         g.setFont(font);
@@ -152,7 +149,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Guerrier"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("img/iconGuerrier.png"));
+                        bouton.setIcon(new ImageIcon(getClass().getResource("/img/iconGuerrier.png")));
                         this.add(bouton);
                     break;
 
@@ -161,7 +158,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("MaitreRune"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("img/iconRunique.png"));
+                        bouton.setIcon(new ImageIcon(getClass().getResource("/img/iconRunique.png")));
                         this.add(bouton);
                         break;
 
@@ -170,7 +167,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Ensorceleuse"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("img/iconEnsorceleuse.png"));
+                        bouton.setIcon(new ImageIcon(getClass().getResource("/img/iconEnsorceleuse.png")));
                         this.add(bouton);
                         break;
 
@@ -179,7 +176,7 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
                         bouton = new JButton(new Bouton1CreationPersonnage("Alchimiste"));
                         bouton.addActionListener(this);
                         bouton.setBounds(5 + i * 125, placement , 115, 150);
-                        bouton.setIcon(new ImageIcon("img/iconAlchimiste.png"));
+                        bouton.setIcon(new ImageIcon(getClass().getResource("/img/iconAlchimiste.png")));
                         this.add(bouton);
                         break;
                 }

@@ -10,7 +10,7 @@ public class MaitreDesRunes extends Warrior {
     private int harmonie;
     private String classe = "     Maitre des runes";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
-    private String fondEcran = "img/fondEcranRunique.jpg";
+    private String fondEcran = "/img/fondEcranRunique.jpg";
     private String[] desc;
 
     public MaitreDesRunes() {

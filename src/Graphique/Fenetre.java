@@ -33,8 +33,8 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     public void tuto(){
         this.actif = "pan";
-        pan.setImageDeFond("img/tuto.jpg");
-        pan.setPersoDroite("img/narrateur.png");
+        pan.setImageDeFond("/img/tuto.jpg");
+        pan.setPersoDroite("/img/narrateur.png");
         pan.setLigne1("Bienvenue sur la 7eme magie, on va commencer par créer votre personnage,");
         pan.setLigne2("Pour le momment il n'existe qu'une classe, le Guerrier,");
         pan.setLigne3("Celui-ci possède des stats moyennes autant en défense qu'en attaque, parfait pour commencer...");
@@ -48,8 +48,8 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         this.actif = "panCombat";
         panCombat.setWarrior(this.pan.getWarrior());
         panCombat.setMonstre(monstre);
-        panCombat.setImageDeFond("img/combatTuto.jpg");
-        panCombat.setPersoDroite("img/gobelin.png");
+        panCombat.setImageDeFond("/img/combatTuto.jpg");
+        panCombat.setPersoDroite("/img/gobelin.png");
         panCombat.setLigne1("");
         panCombat.setLigne2("un gobelin vous fait face");
         panCombat.setLigne3("");
@@ -62,8 +62,8 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     public void CreationPersonnage(){
         this.setContentPane(panCreation);
         this.actif = "panCreationPersonnage";
-        panCreation.setImageDeFond("img/tuto.jpg");
-        panCreation.setPersoDroite("img/narrateur.png");
+        panCreation.setImageDeFond("/img/tuto.jpg");
+        panCreation.setPersoDroite("/img/narrateur.png");
         panCreation.setLigne1("");
         panCreation.setLigne2("Il est maintenant temps de créer votre premier personnage");
         panCreation.setLigne3("");

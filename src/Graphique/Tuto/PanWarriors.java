@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 
-public class PanWarriors  extends JPanel implements MouseListener, ActionListener {
+public class PanWarriors  extends JComponent implements MouseListener, ActionListener {
 
     private Warrior warrior;
 
@@ -18,14 +18,9 @@ public class PanWarriors  extends JPanel implements MouseListener, ActionListene
     }
 
     public void paintComponent(Graphics g){
-        try {
-//            ************************Background*******************************
-            Image img = ImageIO.read(new File(warrior.getFondEcran()));
-            g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
-
-            } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //            ************************Background*******************************
+        Image img = new javax.swing.ImageIcon(getClass().getResource(warrior.getFondEcran())).getImage();
+        g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
         g.setColor(new Color(142, 162, 198,180));
         g.fillRoundRect(5 , 5, 500, 650, 15, 15);

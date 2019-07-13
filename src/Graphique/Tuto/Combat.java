@@ -20,7 +20,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Combat extends JPanel implements MouseListener, ActionListener {
+public class Combat extends JComponent implements MouseListener, ActionListener {
     private Warrior warrior;
     private String imageDeFond = "";
     private String persoDroite = "";
@@ -65,17 +65,13 @@ public class Combat extends JPanel implements MouseListener, ActionListener {
 
 //    ********************* PaintComponent ************************************
     public void paintComponent(Graphics g){
-        try {
-//            ************************Background*******************************
-            Image img = ImageIO.read(new File(imageDeFond));
-            g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+        //            ************************Background*******************************
+        Image img = new javax.swing.ImageIcon(getClass().getResource(imageDeFond)).getImage();
+        g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
 //            ************************** Monstre ********************************
-            Image img2 = ImageIO.read(new File(persoDroite));
-            g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Image img2 = new javax.swing.ImageIcon(getClass().getResource(persoDroite)).getImage();
+        g.drawImage(img2, this.getWidth()-20-img2.getWidth(this), this.getHeight()-130-img2.getHeight(this), img2.getWidth(this), img2.getHeight(this), this);
 
 //        *********************** Fenêtre de dialogue ********************************
         g.fillRoundRect(0, this.getHeight()-130, this.getWidth(), 100, 5, 5);
