@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MaitreDesRunes extends Warrior {
     private int harmonie;
-    private String classe = "Maitre des runes";
+    private String classe = "     Maitre des runes";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "fondEcranRunique.jpg";
     private String[] desc;
@@ -38,7 +38,7 @@ public class MaitreDesRunes extends Warrior {
 
 
     @Override
-    public void setArtsLearned(ArtMartiaux artsLearned) {
+    public void setArtsLearned(Techniques artsLearned) {
     }
 
     @Override
@@ -53,7 +53,7 @@ public class MaitreDesRunes extends Warrior {
 
     @Override
     public void setRessource(int endurance) {
-        this.harmonie = harmonie;
+        this.harmonie = endurance;
     }
 
     @Override

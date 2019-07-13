@@ -33,7 +33,7 @@ public class PanWarriors  extends JPanel implements MouseListener, ActionListene
         Font font = new Font("desc", Font.BOLD, 35);
         g.setFont(font);
         g.setColor((Color.WHITE));
-        g.drawString(warrior.getClasse(), 180, 40);
+        g.drawString(warrior.getClasse(), 80, 40);
 
         font = new Font("desc", Font.BOLD, 33);
         g.setFont(font);

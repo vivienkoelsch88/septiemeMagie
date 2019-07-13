@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Guerrier extends Warrior {
     private int endurance;
-    private String classe = "Chevalier";
+    private String classe = "         Chevalier";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "fondEcranGuerrier.jpg";
     private String[] desc;
@@ -54,7 +54,7 @@ public class Guerrier extends Warrior {
         return artsLearned;
     }
 
-    public void setArtsLearned(ArtMartiaux artsLearned) {
+    public void setArtsLearned(Techniques artsLearned) {
         this.artsLearned.add(artsLearned);
     }
 

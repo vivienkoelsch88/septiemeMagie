@@ -1,6 +1,5 @@
 package Graphique.Tuto;
 
-import Graphique.Bouton.Bouton1CombatTuto;
 import Graphique.Bouton.Bouton1CreationPersonnage;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCreationDePersonnage;
@@ -28,6 +27,48 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     private String text;
     private int continu = 1;
     private ListDialCreationDePersonnage dial;
+    private int tailleLigne1 = 0;
+    private int tailleLigne2 = 57;
+    private int tailleLigne3 = 0;
+    private Timer timer = new Timer(1, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (ligne1.length() > tailleLigne1) {
+                tailleLigne1++;
+                if (ligne1.length() > tailleLigne1) {
+                    tailleLigne1++;
+                    if (ligne1.length() > tailleLigne1) {
+                        tailleLigne1++;
+                    }
+                }
+                repaint();
+            } else if (ligne2.length() > tailleLigne2) {
+                tailleLigne2++;
+                if (ligne2.length() > tailleLigne2) {
+                    tailleLigne2++;
+                    if (ligne2.length() > tailleLigne2) {
+                        tailleLigne2++;
+                    }
+                }
+                repaint();
+            } else if (ligne3.length() > tailleLigne3) {
+                tailleLigne3++;
+                if (ligne3.length() > tailleLigne3) {
+                    tailleLigne3++;
+                    if (ligne3.length() > tailleLigne3) {
+                        tailleLigne3++;
+                    }
+                }
+                repaint();
+            } else {
+                timer.stop();
+                continu++;
+            }
+
+
+
+        }
+    });
 
     public CreationPersonnage(Fenetre fen) {
         this.fen = fen;
@@ -50,9 +91,9 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
         Font font = new Font("desc", Font.BOLD, 12);
         g.setFont(font);
         g.setColor(Color.WHITE);
-        g.drawString(ligne1, 20, this.getHeight()-95);
-        g.drawString(ligne2, 20, this.getHeight()-75);
-        g.drawString(ligne3, 20, this.getHeight()-55);
+        g.drawString(ligne1.substring(0, tailleLigne1), 20, this.getHeight()-95);
+        g.drawString(ligne2.substring(0, tailleLigne2), 20, this.getHeight()-75);
+        g.drawString(ligne3.substring(0, tailleLigne3), 20, this.getHeight()-55);
 
         g.fillRoundRect(this.getWidth()-120 , this.getHeight()- 90, zoneText * 100, zoneText * 40, 5, 5);
         g.setColor((Color.BLACK));
@@ -65,13 +106,32 @@ public class CreationPersonnage  extends JPanel implements MouseListener, Action
     public void mousePressed(MouseEvent e) {
         switch (continu){
             case 1 :
-                this.ligne1 = dial.dial1(continu, this.warrior);
-                this.ligne2 = dial.dial2(continu, this.warrior);
-                this.ligne3 = dial.dial3(continu, this.warrior);
+                tailleLigne1 = 0;
+                tailleLigne2 = 0;
+                tailleLigne3 = 0;
+
+                ligne1 = dial.dial1(continu, warrior);
+                ligne2 = dial.dial2(continu, warrior);
+                ligne3 = dial.dial3(continu, warrior);
+                timer.start();
                 this.continu++;
+                break;
+
+            case 2 :
+                if(tailleLigne1 < ligne1.length()){
+                    tailleLigne1 = ligne1.length();
+                    timer.stop();
+                }
+                if(tailleLigne2 < ligne2.length()) {
+                    tailleLigne2 = ligne2.length();
+                    timer.stop();
+                }
+                if(tailleLigne3 < ligne3.length()) {
+                    tailleLigne3 = ligne3.length();
+                    timer.stop();
+                }
                 afficherListePersonnages(this.getGraphics());
                 repaint();
-                break;
         }
     }
 

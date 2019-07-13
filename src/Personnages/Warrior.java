@@ -178,7 +178,7 @@ public abstract class Warrior {
         }
     }
 
-    public abstract void setArtsLearned(ArtMartiaux artsLearned);
+    public abstract void setArtsLearned(Techniques artsLearned);
     public abstract ArrayList<Techniques> getArtsLearned();
     public abstract int getRessource();
     public abstract void setRessource(int endurance);
