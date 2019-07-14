@@ -1,6 +1,6 @@
 package Graphique.Tuto;
 
-import Cartes.CartesGuerrier.Techniques;
+import Cartes.Techniques;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCombat;
 import Personnages.Warrior;
@@ -236,7 +236,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
                     this.warrior.setMonstre(this.monstre);
 
 //                    **************************** Utilisation de la technique par le joueur *********************
-                    this.techniqueChoisie.utilisation(warrior, Integer.parseInt(this.text));
+                    this.techniqueChoisie.utilisationTuto(warrior, Integer.parseInt(this.text));
                     this.ligne1 = techniqueChoisie.getMoveDesc();
                     this.ligne2 = techniqueChoisie.getMoveDesc2();
                     this.ligne3 = techniqueChoisie.getMoveDesc3();

@@ -1,6 +1,5 @@
 package Graphique.Tuto;
 
-import Cartes.CartesGuerrier.ArtMartiaux;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialTuto;
 import Personnages.Guerrier;
@@ -116,7 +115,7 @@ public class Tuto extends JComponent implements MouseListener {
                     continu++;
                     this.zoneText = 0;
                     repaint();
-                    warrior.getArtsLearned().get(0).utilisation(warrior, Integer.parseInt(this.text));
+                    warrior.getArtsLearned().get(0).utilisationTuto(warrior, Integer.parseInt(this.text));
 
                 } else {
                     ligne1 = "";

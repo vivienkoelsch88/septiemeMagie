@@ -1,5 +1,6 @@
 package Graphique.Tuto;
 
+import Cartes.CartesGuerrier.ListeCarteGuerrier;
 import Graphique.Bouton.Bouton1CreationPersonnage;
 import Graphique.Bouton.Bouton2CreationPersonnage;
 import Graphique.Bouton.Bouton3CreationPersonnage;
@@ -172,15 +173,15 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
         if(choixCartes){
             int placement = 20;
             int placementX = 0;
-            for(int i = 0; i < 15; i++){
-                if(i == 5){
+            for(int i = 0; i < 12; i++){
+                if(i == 4){
                     placement = 170;
                     placementX = 0;
-                } else if (i == 10 ){
+                } else if (i == 8 ){
                     placement = 320;
                     placementX = 0;
                 }
-                JButton boutonCarte = new JButton(new Bouton4CreationPersonnage(this, i, new ArrayList<>(), "carte " + (i+1)));
+                JButton boutonCarte = new JButton(new Bouton4CreationPersonnage(this, i, warrior.getListTechnique(), "carte " + (i+1)));
                 boutonCarte.addActionListener(this);
                 boutonCarte.setBounds(20 + placementX * 95, placement , 90, 120);
                 this.add(boutonCarte);
@@ -374,6 +375,25 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
         continu = 16;
     }
 
+    public void finChoixCarte(){
+        this.removeAll();
+        this.choixCartes = false;
+
+        assignerAttribut = false;
+        affichageDial = true;
+        continu = 20;
+        timer.stop();
+        tailleLigne1 = 0;
+        tailleLigne2 = 0;
+        tailleLigne3 = 0;
+
+        ligne1 = dial.dial1(continu, warrior);
+        ligne2 = dial.dial2(continu, warrior);
+        ligne3 = dial.dial3(continu, warrior);
+        timer.start();
+        continu = 21;
+    }
+
 //    ****************** getter and setter ***********************
 
 
@@ -473,5 +493,13 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
 
     public Fenetre getFen() {
         return fen;
+    }
+
+    public boolean isChoixCartes() {
+        return choixCartes;
+    }
+
+    public void setChoixCartes(boolean choixCartes) {
+        this.choixCartes = choixCartes;
     }
 }

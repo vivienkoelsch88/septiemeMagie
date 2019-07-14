@@ -1,6 +1,7 @@
 package Personnages;
 
-import Cartes.CartesGuerrier.Techniques;
+import Cartes.CartesGuerrier.ListeCarteGuerrier;
+import Cartes.Techniques;
 
 import java.util.ArrayList;
 
@@ -78,5 +79,10 @@ public class Alchimiste extends Warrior {
     @Override
     public String[] getDesc() {
         return desc;
+    }
+
+    @Override
+    public Techniques[] getListTechnique() {
+        return ListeCarteGuerrier.getListeTechnique();
     }
 }

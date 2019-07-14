@@ -1,5 +1,7 @@
-package Cartes.CartesGuerrier;
+package Graphique.Tuto;
 
+import Cartes.Techniques;
+import Graphique.PlateauDeCombat;
 import Personnages.Warrior;
 
 public class ArtMartiaux extends Techniques {
@@ -43,7 +45,7 @@ public class ArtMartiaux extends Techniques {
 
     }
 
-    public void utilisation (Warrior guerrier, int invest){
+    public void utilisationTuto(Warrior guerrier, int invest){
 
         if(super.getName().equals("Attaque furieuse")){
             attaqueFurieuse(guerrier, invest);
@@ -108,11 +110,6 @@ public class ArtMartiaux extends Techniques {
         this.MoveDesc3 = "";
     }
 
-    @Override
-    public void effetFinDeTour(Warrior warrior) {
-
-    }
-
     public String getMoveDesc() {
         return MoveDesc;
     }
@@ -123,5 +120,9 @@ public class ArtMartiaux extends Techniques {
 
     public String getMoveDesc3() {
         return MoveDesc3;
+    }
+
+    @Override
+    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
     }
 }

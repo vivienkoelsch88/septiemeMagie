@@ -1,6 +1,6 @@
 package Personnages;
 
-import Cartes.CartesGuerrier.Techniques;
+import Cartes.Techniques;
 import Monstre.Monstre;
 import Monstre.Orc;
 
@@ -26,6 +26,8 @@ public abstract class Warrior {
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
     private int pioche = 0;
+    private int attaqueBonus2 = 0;
+    private int defenseBonus2 = 0;
 
     //    Constructeurs
 
@@ -176,6 +178,22 @@ public abstract class Warrior {
         }
     }
 
+    public int getAttaqueBonus2() {
+        return attaqueBonus2;
+    }
+
+    public void setAttaqueBonus2(int attaqueBonus2) {
+        this.attaqueBonus2 = attaqueBonus2;
+    }
+
+    public int getDefenseBonus2() {
+        return defenseBonus2;
+    }
+
+    public void setDefenseBonus2(int defenseBonus2) {
+        this.defenseBonus2 = defenseBonus2;
+    }
+
     public abstract void setArtsLearned(Techniques artsLearned);
     public abstract ArrayList<Techniques> getArtsLearned();
     public abstract int getRessource();
@@ -185,6 +203,7 @@ public abstract class Warrior {
     public abstract String getFondEcran();
     public abstract String getClasse();
     public abstract String[] getDesc();
+    public abstract Techniques[] getListTechnique();
 
     public void resetBonus (){
         this.attaqueBonus = 0;

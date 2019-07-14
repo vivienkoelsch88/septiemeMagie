@@ -1,8 +1,14 @@
 package Cartes.CartesGuerrier;
 
+import Cartes.Techniques;
+import Graphique.PlateauDeCombat;
 import Personnages.Warrior;
 
-public class Feinte extends Techniques{
+public class Feinte extends Techniques {
+    private String MoveDesc = "Une passe d'arme classique,";
+    private String MoveDesc2 = "votre adversaire, acculé, se laisse submerger";
+    private String MoveDesc3 = "";
+
     public Feinte() {
         super();
         super.setName("Feinte");
@@ -10,35 +16,37 @@ public class Feinte extends Techniques{
         super.setDesc("Attaque invest X 4 contre une défense, sinon, défense - invest");
         super.setLevel(1);
         super.setType("Attaque");
+        super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
     }
 
     @Override
-    public void utilisation(Warrior guerrier, int invest) {
-        System.out.println("J'attaque de gauche à droite... ou pas :p");
-        if(guerrier.getMonstre().getNextMoveType().equals("Défense")){
-            guerrier.setAttaqueBonus(invest * 4);
+    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+        if(plateauDeCombat.getMonstre().getNextMoveType().equals("Défense")){
+            plateauDeCombat.getWarrior().setAttaqueBonus(invest * 4);
         } else {
-            guerrier.setDefenseBonus(invest * -1);
+            plateauDeCombat.getWarrior().setDefenseBonus(invest * -1);
+            this.MoveDesc2 = "mais votre adversaire ne se laisse pas surprendre,";
+            this.MoveDesc3 = "sans chercher à esquiver, il vous attaque...";
         }
-        guerrier.perteRessource(invest);
+        plateauDeCombat.getWarrior().perteRessource(invest);
     }
 
+    //    *************************************************************************************************
     @Override
-    public void effetFinDeTour(Warrior warrior) {
+    public void utilisationTuto(Warrior guerrier, int invest) {}
 
-    }
     @Override
     public String getMoveDesc() {
-        return null;
+        return MoveDesc;
     }
 
     @Override
     public String getMoveDesc2() {
-        return null;
+        return MoveDesc2;
     }
 
     @Override
     public String getMoveDesc3() {
-        return null;
+        return MoveDesc3;
     }
 }

@@ -26,6 +26,9 @@ public class ListDialCreationDePersonnage {
             case 17 :
                 return "Allez, une petite dernière chose,";
 
+            case 20 :
+                return "Parfait, ";
+
             default:
                 return "";
         }
@@ -56,6 +59,10 @@ public class ListDialCreationDePersonnage {
 
             case 17 :
                 return "le choix des cartes de votre deck bien sûr!";
+
+            case 20 :
+                return "Vous venez de choisir vos 5 cartes, ";
+
             default:
                 return "";
         }
@@ -72,6 +79,9 @@ public class ListDialCreationDePersonnage {
             case 7 :
                 return "elle représente votre force physique";
 
+            case 9 :
+                return "Elle augmente par exemple le nombre d'action que vous effectuez à chaque tour";
+
             case 11 :
                 return "et votre aise sociale de manière générale";
 
@@ -80,6 +90,10 @@ public class ListDialCreationDePersonnage {
 
             case 17 :
                 return "choisissez les 5 cartes qui constituront votre deck";
+
+            case 20 :
+                return "Nous allons pouvoir y aller non? ";
+
 
             default:
                 return "";

@@ -1,5 +1,6 @@
-package Cartes.CartesGuerrier;
+package Cartes;
 
+import Graphique.PlateauDeCombat;
 import Personnages.Warrior;
 
 public abstract class Techniques {
@@ -8,9 +9,18 @@ public abstract class Techniques {
     private String desc;
     private int level;
     private String type;
+    private String image;
 
 
 
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public String getName() {
         return name;
@@ -52,10 +62,11 @@ public abstract class Techniques {
         this.type = type;
     }
 
-    public abstract void utilisation (Warrior guerrier, int invest);
-    public abstract void effetFinDeTour( Warrior warrior);
+    public abstract void utilisationTuto(Warrior guerrier, int invest);
+    public abstract void utilisation(PlateauDeCombat plateauDeCombat, int invest);
 
     public abstract  String getMoveDesc();
     public abstract  String getMoveDesc2();
     public abstract  String getMoveDesc3();
+
 }

@@ -9,6 +9,7 @@ public abstract class Monstre {
     private int defense;
 
     private boolean faiblesse;
+    private boolean fragilite;
 
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
@@ -140,5 +141,13 @@ public abstract class Monstre {
 
     public void setMoveDesc3(String moveDesc3) {
         MoveDesc3 = moveDesc3;
+    }
+
+    public boolean isFragilite() {
+        return fragilite;
+    }
+
+    public void setFragilite(boolean fragilite) {
+        this.fragilite = fragilite;
     }
 }

@@ -109,4 +109,6 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     public JComponent getPanelEnCour() {
         return panelEnCour;
     }
+
+
 }

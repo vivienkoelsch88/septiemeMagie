@@ -4,16 +4,16 @@ import Cartes.Techniques;
 import Graphique.PlateauDeCombat;
 import Personnages.Warrior;
 
-public class BriseCoude extends Techniques {
-    private String MoveDesc = "Vous faîtes un bref pas en avant,";
-    private String MoveDesc2 = "surprenant votre adversaire, vous profitez de ";
-    private String MoveDesc3 = "sa surprise pour frapper de votre bouclier le coude de votre adversaire";
+public class AttaqueDouble extends Techniques {
+    private String MoveDesc = "Trés simple en fait,";
+    private String MoveDesc2 = "un coup à droite, un coup à gauche...";
+    private String MoveDesc3 = "";
 
-    public BriseCoude() {
+    public AttaqueDouble() {
         super();
-        super.setName("Brise-coude");
+        super.setName("Attaque double");
         super.setCout(5);
-        super.setDesc("Inflige faiblesse, les bonus d'attaque ne sont plus appliqués");
+        super.setDesc("Frappe deux fois");
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
@@ -21,9 +21,16 @@ public class BriseCoude extends Techniques {
 
     @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
-        plateauDeCombat.getMonstre().setFaiblesse(true);
-        plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaqueBonus() + invest);
+
+        plateauDeCombat.getWarrior().setAttaqueBonus(invest + plateauDeCombat.getWarrior().getAttaque());
         plateauDeCombat.getWarrior().perteRessource(invest);
+    }
+
+//    *************************************************************************************
+
+    @Override
+    public void utilisationTuto(Warrior guerrier, int invest) {
+
     }
 
     @Override
@@ -39,10 +46,5 @@ public class BriseCoude extends Techniques {
     @Override
     public String getMoveDesc3() {
         return MoveDesc3;
-    }
-
-    @Override
-    public void utilisationTuto(Warrior guerrier, int invest) {
-
     }
 }
