@@ -3,6 +3,7 @@ package Graphique.Tuto;
 import Graphique.Bouton.Bouton1CreationPersonnage;
 import Graphique.Bouton.Bouton2CreationPersonnage;
 import Graphique.Bouton.Bouton3CreationPersonnage;
+import Graphique.Bouton.Bouton4CreationPersonnage;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCreationDePersonnage;
 import Personnages.Guerrier;
@@ -14,6 +15,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static javax.swing.text.StyleConstants.setIcon;
 
@@ -29,6 +31,7 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
     private String text;
     private int continu = 0;
     private boolean assignerAttribut = false;
+    private boolean choixCartes = false;
     private Boolean affichageDial = true;
     private ListDialCreationDePersonnage dial;
     private int tailleLigne1 = 0;
@@ -166,6 +169,26 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
             this.add(boutonValidate);
         }
 
+        if(choixCartes){
+            int placement = 20;
+            int placementX = 0;
+            for(int i = 0; i < 15; i++){
+                if(i == 5){
+                    placement = 170;
+                    placementX = 0;
+                } else if (i == 10 ){
+                    placement = 320;
+                    placementX = 0;
+                }
+                JButton boutonCarte = new JButton(new Bouton4CreationPersonnage(this, i, new ArrayList<>(), "carte " + (i+1)));
+                boutonCarte.addActionListener(this);
+                boutonCarte.setBounds(20 + placementX * 95, placement , 90, 120);
+                this.add(boutonCarte);
+
+                placementX++;
+            }
+        }
+
 
     }
 
@@ -207,6 +230,11 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
                 timer.stop();
                 repaint();
                 affichageDial = false;
+                break;
+
+            case 19 :
+                choixCartes = true;
+                repaint();
                 break;
 
             default :

@@ -23,8 +23,8 @@ public class ListDialCreationDePersonnage {
             case 13 :
                 return "Nous allons donc y répartir 30 points";
 
-            case 15 :
-                return "";
+            case 17 :
+                return "Allez, une petite dernière chose,";
 
             default:
                 return "";
@@ -54,6 +54,8 @@ public class ListDialCreationDePersonnage {
             case 15 :
                 return "Parfait, voila un choix intéressant...";
 
+            case 17 :
+                return "le choix des cartes de votre deck bien sûr!";
             default:
                 return "";
         }
@@ -76,8 +78,8 @@ public class ListDialCreationDePersonnage {
             case 13 :
                 return "et vous ne pouvez pas commencer la partie avec un attribut supérieur à 50";
 
-            case 15 :
-                return "";
+            case 17 :
+                return "choisissez les 5 cartes qui constituront votre deck";
 
             default:
                 return "";
