@@ -1,6 +1,6 @@
 package Graphique.Tuto;
 
-import CartesGuerrier.ArtMartiaux;
+import Cartes.CartesGuerrier.ArtMartiaux;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialTuto;
 import Personnages.Guerrier;
@@ -10,9 +10,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class Tuto extends JComponent implements MouseListener {

@@ -470,4 +470,8 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
     public int getPointsRestant() {
         return pointsRestant;
     }
+
+    public Fenetre getFen() {
+        return fen;
+    }
 }

@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
 public class Fenetre extends JFrame implements KeyListener, ActionListener {
@@ -18,6 +18,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     private Combat panCombat = new Combat(this);
     private CreationPersonnage panCreation = new CreationPersonnage(this);
     private String actif;
+    private JComponent panelEnCour;
 
     public Fenetre(){
         this.setTitle("Ma première fenêtre Java");
@@ -33,6 +34,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     public void tuto(){
         this.actif = "pan";
+        this.panelEnCour = this.pan;
         pan.setImageDeFond("/img/tuto.jpg");
         pan.setPersoDroite("/img/narrateur.png");
         pan.setLigne1("Bienvenue sur la 7eme magie, on va commencer par créer votre personnage,");
@@ -43,7 +45,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     public void CombatTuto(){
         Monstre monstre = new Gobelin();
-
+        this.panelEnCour = this.panCombat;
         this.setContentPane(panCombat);
         this.actif = "panCombat";
         panCombat.setWarrior(this.pan.getWarrior());
@@ -60,6 +62,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     }
 
     public void CreationPersonnage(){
+        this.panelEnCour = this.panCreation;
         this.setContentPane(panCreation);
         this.actif = "panCreationPersonnage";
         panCreation.setImageDeFond("/img/tuto.jpg");
@@ -103,4 +106,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     }
 
+    public JComponent getPanelEnCour() {
+        return panelEnCour;
+    }
 }

@@ -1,12 +1,10 @@
 package Personnages;
 
-import CartesGuerrier.ArtMartiaux;
-import CartesGuerrier.Techniques;
+import Cartes.CartesGuerrier.Techniques;
 import Monstre.Monstre;
 import Monstre.Orc;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public abstract class Warrior {
     //    Attributs

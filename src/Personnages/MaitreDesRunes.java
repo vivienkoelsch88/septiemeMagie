@@ -1,8 +1,6 @@
 package Personnages;
 
-import CartesGuerrier.ArtMartiaux;
-import CartesGuerrier.Techniques;
-import CartesRuniques.MagieRunique;
+import Cartes.CartesGuerrier.Techniques;
 
 import java.util.ArrayList;
 

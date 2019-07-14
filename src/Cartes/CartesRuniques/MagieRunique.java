@@ -1,16 +1,39 @@
-package CartesGuerrier;
+package Cartes.CartesRuniques;
 
-import Personnages.Warrior;
-
-public abstract class Techniques {
+public abstract class MagieRunique {
     private String name;
     private int cout;
     private String desc;
     private int level;
     private String type;
+    public String moveDesc;
+    public String moveDesc2;
+    public String moveDesc3;
 
 
+    public String getMoveDesc() {
+        return moveDesc;
+    }
 
+    public void setMoveDesc(String moveDesc) {
+        this.moveDesc = moveDesc;
+    }
+
+    public String getMoveDesc2() {
+        return moveDesc2;
+    }
+
+    public void setMoveDesc2(String moveDesc2) {
+        this.moveDesc2 = moveDesc2;
+    }
+
+    public String getMoveDesc3() {
+        return moveDesc3;
+    }
+
+    public void setMoveDesc3(String moveDesc3) {
+        this.moveDesc3 = moveDesc3;
+    }
 
     public String getName() {
         return name;
@@ -51,11 +74,4 @@ public abstract class Techniques {
     public void setType(String type) {
         this.type = type;
     }
-
-    public abstract void utilisation (Warrior guerrier, int invest);
-    public abstract void effetFinDeTour( Warrior warrior);
-
-    public abstract  String getMoveDesc();
-    public abstract  String getMoveDesc2();
-    public abstract  String getMoveDesc3();
 }

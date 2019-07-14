@@ -1,6 +1,6 @@
 package Personnages;
 
-import CartesGuerrier.Techniques;
+import Cartes.CartesGuerrier.Techniques;
 
 import java.util.ArrayList;
 

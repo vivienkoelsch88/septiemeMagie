@@ -1,6 +1,6 @@
 package Graphique.Tuto;
 
-import CartesGuerrier.Techniques;
+import Cartes.CartesGuerrier.Techniques;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCombat;
 import Personnages.Warrior;
@@ -11,10 +11,7 @@ import Monstre.Monstre;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;

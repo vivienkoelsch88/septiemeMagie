@@ -1,4 +1,4 @@
-package CartesGuerrier;
+package Cartes.CartesGuerrier;
 
 
 import Personnages.Warrior;

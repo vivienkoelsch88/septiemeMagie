@@ -1,6 +1,7 @@
 package Graphique.Bouton;
 
-import CartesGuerrier.Techniques;
+import Cartes.AfficherCarte;
+import Cartes.CartesGuerrier.Techniques;
 import Graphique.Tuto.CreationPersonnage;
 
 import javax.swing.*;
@@ -21,6 +22,10 @@ public class Bouton4CreationPersonnage extends AbstractAction {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        pan.getFen().setContentPane(new AfficherCarte(pan.getFen()));
+        pan.getFen().setResizable(false);
+        pan.getFen().addKeyListener(pan.getFen());
 
+        this.pan.getFen().setVisible(true);
     }
 }
