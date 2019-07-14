@@ -93,7 +93,7 @@ public abstract class Warrior {
     }
 
     public int getAttaque() {
-        return attaque;
+        return attaque + attaqueBonus2;
     }
 
     public void setAttaque(int attaque) {

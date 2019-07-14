@@ -14,7 +14,7 @@ public class ChangementDePosition extends Techniques {
         super();
         super.setName("Changement de position");
         super.setCout(0);
-        super.setDesc("Pas d'attaque, mais un bonus de défense de Concentration et une pioche");
+        super.setDesc(new String[]{"Pas d'attaque, mais un bonus de défense de Concentration et une pioche", "", "Effet : ", "Attaque = 0", "Défense + investissement", "pioche", "", "Type : Défense", "Level : 1"});
         super.setLevel(1);
         super.setType("Défense");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

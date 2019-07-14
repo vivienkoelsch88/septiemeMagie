@@ -13,7 +13,7 @@ public class SurLaDefensive extends Techniques {
         super();
         super.setName("Sur la défensive");
         super.setCout(5);
-        super.setDesc("N'attaque pas mais vous rend de l'endurance contre de la concentration");
+        super.setDesc(new String[]{"N'attaque pas mais vous rend de l'endurance contre de la concentration", "", "Effet : ", "Attaque = 0", "Endurance + investissement X 2", "Concentration - investissement", "", "Type : Défense", "Level : 1"});
         super.setLevel(1);
         super.setType("Défense");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
@@ -21,6 +21,7 @@ public class SurLaDefensive extends Techniques {
 
     @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+        plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() + (invest * 2));
         plateauDeCombat.getWarrior().setConcentration(plateauDeCombat.getWarrior().getConcentration() - invest);
     }

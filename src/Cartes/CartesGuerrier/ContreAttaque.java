@@ -13,7 +13,7 @@ public class ContreAttaque extends Techniques {
         super();
         super.setName("Contre Attaque");
         super.setCout(5);
-        super.setDesc("Esquive puis riposte");
+        super.setDesc(new String[]{"Esquive puis riposte", "", "Effet : ", "Défense + investissement X 2", "Si le monstre compte vous attaquer : Attaque + investissement", "", "Type : Défense", "Level : 1"});
         super.setLevel(1);
         super.setType("Défense");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

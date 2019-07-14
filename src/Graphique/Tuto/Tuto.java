@@ -111,7 +111,7 @@ public class Tuto extends JComponent implements MouseListener {
                 if(Integer.parseInt(this.text) < 10 && Integer.parseInt(this.text) > 0) {
                     ligne1 = "Alors on investie " + this.text + " points dedans";
                     ligne2 = dial.dial2(continu, this.warrior);
-                    ligne3 = warrior.getArtsLearned().get(0).getDesc();
+                    ligne3 = warrior.getArtsLearned().get(0).getDesc()[0];
                     continu++;
                     this.zoneText = 0;
                     repaint();

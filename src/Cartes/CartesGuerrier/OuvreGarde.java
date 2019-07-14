@@ -14,7 +14,7 @@ public class OuvreGarde extends Techniques {
         super();
         super.setName("Ouvre-garde");
         super.setCout(5);
-        super.setDesc("Inflige fragile, les bonus de défense ne sont plus appliqués");
+        super.setDesc(new String[]{"Inflige fragile, les bonus de défense ne sont plus appliqués", "", "Effet : ", "Applique Faiblesse", "Attaque + investissement", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

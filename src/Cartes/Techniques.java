@@ -6,7 +6,7 @@ import Personnages.Warrior;
 public abstract class Techniques {
     private String name;
     private int cout;
-    private String desc;
+    private String[] desc;
     private int level;
     private String type;
     private String image;
@@ -38,11 +38,11 @@ public abstract class Techniques {
         this.cout = cout;
     }
 
-    public String getDesc() {
+    public String[] getDesc() {
         return desc;
     }
 
-    public void setDesc(String desc) {
+    public void setDesc(String[] desc) {
         this.desc = desc;
     }
 

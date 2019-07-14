@@ -13,7 +13,7 @@ public class Feinte extends Techniques {
         super();
         super.setName("Feinte");
         super.setCout(5);
-        super.setDesc("Attaque invest X 4 contre une défense, sinon, défense - invest");
+        super.setDesc(new String[]{"Une attaque efficace si l'adversaire se défend", "", "Effet : ", "Attaque invest X 4 contre une défense, sinon, défense - invest", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

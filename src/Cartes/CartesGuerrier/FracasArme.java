@@ -13,7 +13,7 @@ public class FracasArme extends Techniques {
         super();
         super.setName("Fraca's Arme");
         super.setCout(10);
-        super.setDesc("Si la cible est faible, réduit son attaque définitivement, ");
+        super.setDesc(new String[]{"Si la cible est faible, réduit son attaque définitivement", "", "Effet : ", "Si l'adversaire est faible : attaque - 1 définitivement", "Attaque + investissement", "", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

@@ -13,7 +13,7 @@ public class ViveAttaque extends Techniques {
         super();
         super.setName("Vive attaque");
         super.setCout(5);
-        super.setDesc("Sacrifie vos points d'adresse pour une attaque trés puissante");
+        super.setDesc(new String[]{"Sacrifie vos points d'adresse pour une attaque trés puissante", "", "Effet : ", "Attaque + investissement X 6", "Défense + investissement X 2", "Adresse - investissement", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

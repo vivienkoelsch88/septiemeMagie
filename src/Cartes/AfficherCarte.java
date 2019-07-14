@@ -32,8 +32,21 @@ public class AfficherCarte extends JComponent implements MouseListener, ActionLi
         Image img = new javax.swing.ImageIcon(getClass().getResource(this.warrior.getFondEcran())).getImage();
         g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
 
-        img = new javax.swing.ImageIcon(getClass().getResource(this.techniques.getImage())).getImage();
-        g.drawImage(img, 5, 5, 400, 520, this);
+        g.setColor(new Color(142, 162, 198,80));
+        g.fillRoundRect(5 , 5, 500, 520, 15, 15);
+
+        Font font = new Font("desc", Font.BOLD, 25);
+        g.setFont(font);
+        g.setColor(Color.WHITE);
+        g.drawString(this.techniques.getName(), 155, 65);
+        font = new Font("desc", Font.BOLD, 12);
+        g.setFont(font);
+        int placementDesc = 0;
+        for (String desc : this.techniques.getDesc()){
+            g.drawString(desc, 40, 105 + (placementDesc * 20));
+            placementDesc++;
+        }
+
 
         JButton boutonRetour = new JButton(new Bouton1AfficherCarte(this.fen));
         boutonRetour.addActionListener(this);

@@ -13,7 +13,7 @@ public class FrappeBrutale extends Techniques {
         super();
         super.setName("Frappe Brutale");
         super.setCout(5);
-        super.setDesc("Sacrifie vos points de force pour une attaque trés puissante");
+        super.setDesc(new String[]{"Sacrifie vos points de force pour une attaque trés puissante", "", "Effet : ", "Force - investissement", "attaque + investissement X 8", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");

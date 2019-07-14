@@ -16,28 +16,28 @@ public class ArtMartiaux extends Techniques {
         if(choixTec == 1){
             super.setName("Attaque furieuse");
             super.setCout(5);
-            super.setDesc("une attaque puissante, mais au détriment de vos points de vie...");
+            super.setDesc(new String[]{"une attaque puissante, mais au détriment de vos points de vie..."});
             super.setLevel(1);
             super.setType("Attaque");
 
         } else if (choixTec == 2){
             super.setName("Attaque prudente");
             super.setCout(5);
-            super.setDesc("une attaque un peu moins puissante mais qui vous expose moins");
+            super.setDesc(new String[]{"une attaque un peu moins puissante mais qui vous expose moins"});
             super.setLevel(1);
             super.setType("Attaque");
 
         } else if (choixTec == 3){
             super.setName("Riposte");
             super.setCout(5);
-            super.setDesc("une attaque puissante si l'adversaire comptait vous attaquer ce tour... Sinon moins");
+            super.setDesc(new String[]{"une attaque puissante si l'adversaire comptait vous attaquer ce tour... Sinon moins"});
             super.setLevel(1);
             super.setType("Attaque");
 
         } else if (choixTec == 4) {
             super.setName("Esquive");
             super.setCout(5);
-            super.setDesc("Se concentrer sur l'esquive, sans penser à frapper... Parfois ça sauve la vie...");
+            super.setDesc(new String[]{"Se concentrer sur l'esquive, sans penser à frapper... Parfois ça sauve la vie..."});
             super.setLevel(1);
             super.setType("Défense");
 
