@@ -84,4 +84,5 @@ public class PanWarriors  extends JComponent implements MouseListener, ActionLis
     public void mouseExited(MouseEvent e) {
 
     }
+
 }

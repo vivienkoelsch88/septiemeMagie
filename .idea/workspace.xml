@@ -7,35 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3f245ac-2c96-485d-a86e-dd5638aa32f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/7Magie_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CreationPersonnage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CreationPersonnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7Magie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/7Magie.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/combatTuto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/combatTuto.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/fondEcranAlchimiste.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/fondEcranAlchimiste.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/fondEcranEnsorceleuse.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/fondEcranEnsorceleuse.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/fondEcranGuerrier.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/fondEcranGuerrier.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/fondEcranRunique.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/fondEcranRunique.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/gobelin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/gobelin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/iconAlchimiste.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/iconAlchimiste.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/iconEnsorceleuse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/iconEnsorceleuse.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/iconGuerrier.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/iconGuerrier.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/iconRunique.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/iconRunique.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/narrateur.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/narrateur.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/tuto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/tuto.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Fenetre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Fenetre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Combat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/PanWarriors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/PanWarriors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Tuto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Tuto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Personnages/Alchimiste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Personnages/Alchimiste.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Personnages/Ensorceleuse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Personnages/Ensorceleuse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Personnages/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Personnages/Guerrier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Personnages/MaitreDesRunes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Personnages/MaitreDesRunes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Fenetre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/Combat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Personnages/Alchimiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnages/Alchimiste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Personnages/Ensorceleuse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnages/Ensorceleuse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Personnages/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnages/Guerrier.java" afterDir="false" />
@@ -52,115 +36,89 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="80" column="69" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/FenetreWarriors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="43" column="94" selection-start-line="43" selection-start-column="94" selection-end-line="43" selection-end-column="94" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RunGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CreationPersonnage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Combat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.68266886">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="5236">
+                  <caret line="338" column="25" lean-forward="true" selection-start-line="338" selection-start-column="25" selection-end-line="338" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#13588#13589#0" expanded="true" />
+                    <element signature="e#13688#13689#0" expanded="true" />
+                    <element signature="e#13760#13761#0" expanded="true" />
+                    <element signature="e#13860#13861#0" expanded="true" />
+                    <element signature="e#13922#13923#0" expanded="true" />
+                    <element signature="e#14002#14003#0" expanded="true" />
+                    <element signature="e#14064#14065#0" expanded="true" />
+                    <element signature="e#14144#14145#0" expanded="true" />
+                    <element signature="e#14206#14207#0" expanded="true" />
+                    <element signature="e#14286#14287#0" expanded="true" />
+                    <element signature="e#14345#14346#0" expanded="true" />
+                    <element signature="e#14797#14798#0" expanded="true" />
+                    <element signature="e#14882#14883#0" expanded="true" />
+                    <element signature="e#14154#14155#0" expanded="true" />
+                    <element signature="e#14173#14174#0" expanded="true" />
+                    <element signature="e#14227#14228#0" expanded="true" />
+                    <element signature="e#14263#14264#0" expanded="true" />
+                    <element signature="e#14300#14301#0" expanded="true" />
+                    <element signature="e#14336#14337#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Personnages/Warrior.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1462">
+                  <caret line="180" column="50" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CreationPersonnage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="782">
+                  <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CreationPersonnage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -175,8 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Combat/CombatSimple.java" />
-        <option value="$PROJECT_DIR$/src/Aventure1/VilleDeGoldgate.java" />
         <option value="$PROJECT_DIR$/src/Donjon/SalleMonstre.java" />
         <option value="$PROJECT_DIR$/src/Glob/Panneau.java" />
         <option value="$PROJECT_DIR$/src/Glob/Fenetre.java" />
@@ -197,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/Combat/Techniques.java" />
         <option value="$PROJECT_DIR$/src/Combat/Attaque.java" />
         <option value="$PROJECT_DIR$/src/CartesGuerrier/Attaque.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java" />
         <option value="$PROJECT_DIR$/src/Glob/RunGame.java" />
         <option value="$PROJECT_DIR$/src/CartesRuniques/MagieRunique.java" />
         <option value="$PROJECT_DIR$/src/CartesGuerrier/Techniques.java" />
@@ -215,21 +170,24 @@
         <option value="$PROJECT_DIR$/src/CartesGuerrier/TransBerserk.java" />
         <option value="$PROJECT_DIR$/src/Personnages/Warrior.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CreationPersonnage.java" />
-        <option value="$PROJECT_DIR$/src/Personnages/Alchimiste.java" />
-        <option value="$PROJECT_DIR$/src/Personnages/Ensorceleuse.java" />
-        <option value="$PROJECT_DIR$/src/Personnages/Guerrier.java" />
-        <option value="$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java" />
         <option value="$PROJECT_DIR$/src/Graphique/MonPanel.java" />
         <option value="$PROJECT_DIR$/src/RunGame.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/Combat.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CreationPersonnage.java" />
+        <option value="$PROJECT_DIR$/src/Personnages/Alchimiste.java" />
+        <option value="$PROJECT_DIR$/src/Personnages/Ensorceleuse.java" />
+        <option value="$PROJECT_DIR$/src/Personnages/Guerrier.java" />
+        <option value="$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CreationPersonnage.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="234" />
     <option name="y" value="-16" />
     <option name="width" value="1038" />
@@ -289,6 +247,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Graphique" type="462c0819:PsiDirectoryNode" />
               <item name="Tuto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="septiemeMagie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="septiemeMagie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Graphique" type="462c0819:PsiDirectoryNode" />
+              <item name="Tuto" type="462c0819:PsiDirectoryNode" />
+              <item name="ListDial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="septiemeMagie" type="b2602c69:ProjectViewProjectNode" />
@@ -387,12 +353,13 @@
       <workItem from="1563019416835" duration="21672000" />
       <workItem from="1563054114424" duration="1316000" />
       <workItem from="1563055457028" duration="26000" />
-      <workItem from="1563055646623" duration="4504000" />
+      <workItem from="1563055646623" duration="5219000" />
+      <workItem from="1563099659148" duration="11510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156599000" />
+    <option name="totallyTimeSpent" value="168824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -412,7 +379,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.14901665" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.07034796" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32569557" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -421,7 +388,7 @@
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.23240589" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.2111293" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.2111293" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.44684684" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -500,8 +467,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Aventure1/Aventure.java" />
-    <entry file="file://$PROJECT_DIR$/src/Donjon/Donjon.java" />
     <entry file="file://$PROJECT_DIR$/src/Combat/Simple.java" />
     <entry file="file://$PROJECT_DIR$/src/Donjon/SallePiege.java" />
     <entry file="file://$PROJECT_DIR$/src/Donjon/SalleVide.java" />
@@ -685,85 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/Warrior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="180" column="50" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/Alchimiste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/Ensorceleuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/Guerrier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CreationPersonnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/MonPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/MonPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/RunGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -771,17 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/FenetreWarriors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Combat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
+        <state relative-caret-position="170">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -790,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="510">
           <caret line="43" column="94" selection-start-line="43" selection-start-column="94" selection-end-line="43" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -798,20 +681,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="80" column="69" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="69" />
+        <state relative-caret-position="459">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/FenetreWarriors.java">
+    <entry file="file://$PROJECT_DIR$/src/Personnages/Ensorceleuse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="102">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Personnages/Alchimiste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CreationPersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Personnages/Guerrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Combat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189">
+          <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -820,11 +750,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="-36">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Personnages/Warrior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="180" column="50" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5236">
+          <caret line="338" column="25" lean-forward="true" selection-start-line="338" selection-start-column="25" selection-end-line="338" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#13588#13589#0" expanded="true" />
+            <element signature="e#13688#13689#0" expanded="true" />
+            <element signature="e#13760#13761#0" expanded="true" />
+            <element signature="e#13860#13861#0" expanded="true" />
+            <element signature="e#13922#13923#0" expanded="true" />
+            <element signature="e#14002#14003#0" expanded="true" />
+            <element signature="e#14064#14065#0" expanded="true" />
+            <element signature="e#14144#14145#0" expanded="true" />
+            <element signature="e#14206#14207#0" expanded="true" />
+            <element signature="e#14286#14287#0" expanded="true" />
+            <element signature="e#14345#14346#0" expanded="true" />
+            <element signature="e#14797#14798#0" expanded="true" />
+            <element signature="e#14882#14883#0" expanded="true" />
+            <element signature="e#14154#14155#0" expanded="true" />
+            <element signature="e#14173#14174#0" expanded="true" />
+            <element signature="e#14227#14228#0" expanded="true" />
+            <element signature="e#14263#14264#0" expanded="true" />
+            <element signature="e#14300#14301#0" expanded="true" />
+            <element signature="e#14336#14337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CreationPersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CreationPersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
         </state>
       </provider>
     </entry>

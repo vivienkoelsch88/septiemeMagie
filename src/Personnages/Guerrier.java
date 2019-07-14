@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Guerrier extends Warrior {
     private int endurance;
-    private String classe = "         Chevalier";
+    private String classe = "Chevalier";
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "/img/fondEcranGuerrier.jpg";
     private String[] desc;
