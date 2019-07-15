@@ -10,9 +10,11 @@ public class Alchimiste extends Warrior {
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "/img/fondEcranAlchimiste.jpg";
     private String[] desc;
+    private String typeRessource = "";
 
     public Alchimiste() {
         super(50, 12, 5);
+        super.setIcon("/img/iconAlchimiste.png");
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -40,6 +42,11 @@ public class Alchimiste extends Warrior {
     @Override
     public ArrayList<Techniques> getArtsLearned() {
         return this.artsLearned;
+    }
+
+    @Override
+    public String getTypeRessource() {
+        return null;
     }
 
     @Override

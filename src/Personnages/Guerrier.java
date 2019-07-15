@@ -11,10 +11,12 @@ public class Guerrier extends Warrior {
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "/img/fondEcranGuerrier.jpg";
     private String[] desc;
+    private String typeRessource = "Endurance";
 
     public Guerrier() {
         super(50, 18, 6);
         this.endurance = 100;
+        this.setIcon("/img/iconGuerrier.png");
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -44,6 +46,11 @@ public class Guerrier extends Warrior {
 
     public int getRessource() {
         return endurance;
+    }
+
+    @Override
+    public String getTypeRessource() {
+        return typeRessource;
     }
 
     public void setRessource(int endurance) {

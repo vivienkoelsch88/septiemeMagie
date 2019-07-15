@@ -11,6 +11,7 @@ public abstract class Warrior {
     private int life;
     private int attaque;
     private int defense;
+    private String icon;
 
     private int concentration = 30;
     private int force;
@@ -178,6 +179,14 @@ public abstract class Warrior {
         }
     }
 
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
     public int getAttaqueBonus2() {
         return attaqueBonus2;
     }
@@ -204,6 +213,7 @@ public abstract class Warrior {
     public abstract String getClasse();
     public abstract String[] getDesc();
     public abstract Techniques[] getListTechnique();
+    public abstract String getTypeRessource();
 
     public void resetBonus (){
         this.attaqueBonus = 0;

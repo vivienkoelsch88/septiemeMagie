@@ -1,6 +1,5 @@
 package Graphique.Bouton;
 
-import Graphique.Fenetre;
 import Graphique.Tuto.FenetreWarriors;
 import Personnages.*;
 

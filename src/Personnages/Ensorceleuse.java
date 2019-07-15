@@ -11,10 +11,12 @@ public class Ensorceleuse extends Warrior {
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "/img/fondEcranEnsorceleuse.jpg";
     private String[] desc;
+    private String typeRessource = "Aura";
 
     public Ensorceleuse() {
         super(40, 12, 6);
         this.aura = 100;
+        this.setIcon("/img/iconEnsorceleuse.png");
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -47,6 +49,11 @@ public class Ensorceleuse extends Warrior {
     @Override
     public int getRessource() {
         return aura;
+    }
+
+    @Override
+    public String getTypeRessource() {
+        return typeRessource;
     }
 
     @Override

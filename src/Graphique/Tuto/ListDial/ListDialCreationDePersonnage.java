@@ -29,6 +29,12 @@ public class ListDialCreationDePersonnage {
             case 20 :
                 return "Parfait, ";
 
+            case 22 :
+                return "Ha si une dernière chose,";
+
+            case 24 :
+                return "Déterminer l'ordre des carte de votre deck est donc primordial,";
+
             default:
                 return "";
         }
@@ -63,6 +69,12 @@ public class ListDialCreationDePersonnage {
             case 20 :
                 return "Vous venez de choisir vos 5 cartes, ";
 
+            case 22 :
+                return "Comme vous le savez au début d'une phase d'action,";
+
+            case 24 :
+                return "prenez donc le temps de les ranger dans l'ordre le plus pertinent";
+
             default:
                 return "";
         }
@@ -93,6 +105,12 @@ public class ListDialCreationDePersonnage {
 
             case 20 :
                 return "Nous allons pouvoir y aller non? ";
+
+            case 22 :
+                return "vous piochez un nombre de carte égal à votre concentration / 10";
+
+            case 24 :
+                return "en cliquant sur le prtrait de votre personnage";
 
 
             default:

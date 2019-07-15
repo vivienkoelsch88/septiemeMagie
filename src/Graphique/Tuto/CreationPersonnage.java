@@ -1,24 +1,13 @@
 package Graphique.Tuto;
 
-import Cartes.CartesGuerrier.ListeCarteGuerrier;
-import Graphique.Bouton.Bouton1CreationPersonnage;
-import Graphique.Bouton.Bouton2CreationPersonnage;
-import Graphique.Bouton.Bouton3CreationPersonnage;
-import Graphique.Bouton.Bouton4CreationPersonnage;
+import Graphique.Bouton.*;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCreationDePersonnage;
 import Personnages.Guerrier;
 import Personnages.Warrior;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import static javax.swing.text.StyleConstants.setIcon;
 
 public class CreationPersonnage  extends JComponent implements MouseListener, ActionListener {
     private Fenetre fen;
@@ -32,6 +21,7 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
     private String text;
     private int continu = 0;
     private boolean assignerAttribut = false;
+    private boolean afficherPortraitPersonnage = false;
     private boolean choixCartes = false;
     private Boolean affichageDial = true;
     private ListDialCreationDePersonnage dial;
@@ -105,9 +95,6 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
         if(zoneText == 1){
             g.setColor(new Color(142, 162, 198,80));
             g.fillRoundRect(5 , 5, 500, 520, 15, 15);
-//            g.fillRoundRect(this.getWidth()-120 , this.getHeight()- 90, zoneText * 100, zoneText * 40, 5, 5);
-//            g.setColor((Color.BLACK));
-//            g.drawString(text, this.getWidth()-110, this.getHeight()- 68);
         }
 
         if (assignerAttribut){
@@ -190,6 +177,14 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
             }
         }
 
+        if(afficherPortraitPersonnage){
+            JButton profilPersonnage = new JButton(new BoutonPersonnage(this.getFen(), this.warrior));
+            profilPersonnage.addActionListener(this);
+            profilPersonnage.setBounds(this.getWidth() - 120, 5 , 115, 150);
+            profilPersonnage.setIcon(new ImageIcon(getClass().getResource(this.warrior.getIcon())));
+            this.add(profilPersonnage);
+
+        }
 
     }
 
@@ -235,6 +230,13 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
 
             case 19 :
                 choixCartes = true;
+                repaint();
+                break;
+
+            case 26 :
+                afficherPortraitPersonnage = true;
+                imageDeFond = "/img/tuto.jpg";
+                persoDroite = "/img/narrateur.png";
                 repaint();
                 break;
 

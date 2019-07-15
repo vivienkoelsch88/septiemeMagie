@@ -11,10 +11,12 @@ public class MaitreDesRunes extends Warrior {
     private ArrayList<Techniques> artsLearned = new ArrayList<>();
     private String fondEcran = "/img/fondEcranRunique.jpg";
     private String[] desc;
+    private String typeRessource = "Harmonie";
 
     public MaitreDesRunes() {
         super(60, 14, 7);
         this.harmonie = 100;
+        this.setIcon("/img/iconRunique.png");
 
         this.desc = new String[]{
                 "Le Lorem Ipsum est simplement du faux texte employé ",
@@ -38,6 +40,11 @@ public class MaitreDesRunes extends Warrior {
 
     @Override
     public void setArtsLearned(Techniques artsLearned) {
+    }
+
+    @Override
+    public String getTypeRessource() {
+        return typeRessource;
     }
 
     @Override
