@@ -238,6 +238,7 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
                 imageDeFond = "/img/tuto.jpg";
                 persoDroite = "/img/narrateur.png";
                 repaint();
+                continu++;
                 break;
 
             default :
@@ -248,7 +249,7 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
                     timer.stop();
                     repaint();
                     affichageDial = false;
-                    continu++;
+                    this.continu++;
 
                 } else {
                     timer.stop();

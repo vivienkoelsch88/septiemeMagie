@@ -14,7 +14,7 @@ public class ListDialTuto {
         } else if( avancement == 4){
             return "";
         } else if( avancement == 5){
-            return "Bon, le principe est simple, chaque technique demande un investissement pour être utilisée";
+            return "Le principe est simple, chaque technique demande un investissement pour être utilisée";
         } else if( avancement == 6){
             return "";
         }  else if( avancement == 7){

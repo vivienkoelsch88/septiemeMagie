@@ -206,7 +206,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
 
     public void choixTechnique(int choix){
         if(choixBouton) {
-            this.ligne1 = "vous avez choisis la carte " + this.deck.get(choix).getName();
+            this.ligne1 = "vous avez choisi la carte " + this.deck.get(choix).getName();
             this.ligne2 = "Combien y investissez vous?";
             this.zoneText = 1;
             this.techniqueChoisie = this.deck.get(choix);

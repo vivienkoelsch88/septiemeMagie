@@ -108,8 +108,8 @@ public class Tuto extends JComponent implements MouseListener {
                 }
             }
             if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-                if(Integer.parseInt(this.text) < 10 && Integer.parseInt(this.text) > 0) {
-                    ligne1 = "Alors on investie " + this.text + " points dedans";
+                if(Integer.parseInt(this.text) <= 10 && Integer.parseInt(this.text) >= 0) {
+                    ligne1 = "Alors on investi " + this.text + " points dedans";
                     ligne2 = dial.dial2(continu, this.warrior);
                     ligne3 = warrior.getArtsLearned().get(0).getDesc()[0];
                     continu++;

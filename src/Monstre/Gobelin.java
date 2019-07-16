@@ -17,7 +17,7 @@ public class Gobelin extends  Monstre{
             this.setNextMoveType("Distance");
         } else if (this.getNextMove() == 1){
             this.setMoveDesc("Le gobelin, cette fois, semble plus prudent, il prend de la distance avec vous,");
-            this.setMoveDesc2("mais prend le temps de quand même vous envoyer sa dague à la figure... Une vielle lame rouillée qui dégouline de... \"truc\"");
+            this.setMoveDesc2("mais prend le temps de quand même vous envoyer sa dague à la figure... Une vielle lame rouillée qui dégouline de... \"trucs\"");
             this.setMoveDesc3("");
             this.setAttaqueBonus(6);
             this.setDefenseBonus(10);

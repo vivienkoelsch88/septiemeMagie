@@ -21,7 +21,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     private JComponent panelEnCour;
 
     public Fenetre(){
-        this.setTitle("Ma première fenêtre Java");
+        this.setTitle("La 7ème magie");
         this.setSize(1000, 700);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
