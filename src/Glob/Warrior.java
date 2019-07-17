@@ -40,7 +40,7 @@ public abstract class Warrior {
     }
 
     //    Méthodes
-    public void ajouterEffetFinDeTour(Techniques techniques){
+    public void ajouterEffetFinDeTour(Techniques techniques) {
         effetFinDeTour.add(techniques);
     }
 
@@ -77,7 +77,7 @@ public abstract class Warrior {
         this.pioche = pioche;
     }
 
-    public void pioche(){
+    public void pioche() {
         this.pioche++;
     }
 
@@ -137,7 +137,7 @@ public abstract class Warrior {
         this.adversaires = adversaires;
     }
 
-    public ArrayList<Techniques> listCarte(){
+    public ArrayList<Techniques> listCarte() {
         return this.deck;
     }
 
@@ -145,7 +145,7 @@ public abstract class Warrior {
         this.deck = deck;
     }
 
-    public void ajouterCarte(Techniques techniques){
+    public void ajouterCarte(Techniques techniques) {
         this.deck.add(techniques);
     }
 
@@ -181,33 +181,41 @@ public abstract class Warrior {
         this.charisme = charisme;
     }
 
-    public void setCarte(Techniques techniques){
+    public void setCarte(Techniques techniques) {
         deck.add(techniques);
     }
 
-    public void prendreDommages(int dommages){
-        if(dommages -defense - defenseBonus > 0) {
+    public void prendreDommages(int dommages) {
+        if (dommages - defense - defenseBonus > 0) {
             System.out.println("Vous recevez " + (dommages - defense - defenseBonus) + "(" + dommages + ")" + " dommages");
             this.life = this.life - (dommages - defense - defenseBonus);
         } else {
             System.out.println("Bon, l'attaque ne traverse pas votre armure, c'est toujours ça de pris");
         }
-        if(this.life <1){
+        if (this.life < 1) {
             System.out.println("Aïe, ça fait beaucoup de dommages tout ça, mis bout à bout... Ca suffit même à vous tuer...");
         }
     }
 
     public abstract ArrayList<ArtMartiaux> getArts();
+
     public abstract void setArtsLearned(ArtMartiaux artsLearned);
+
     public abstract ArrayList<ArtMartiaux> getArtsLearned();
+
     public abstract int getEndurance();
+
     public abstract void setEndurance(int endurance);
+
     public abstract void perteEndurance(int perte);
+
     public abstract void showPerso();
+
     public abstract ArrayList<Techniques> getDeck();
+
     public abstract void combatre(Scanner sc);
 
-    public void resetBonus (){
+    public void resetBonus() {
         this.lifeBonus = 0;
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
