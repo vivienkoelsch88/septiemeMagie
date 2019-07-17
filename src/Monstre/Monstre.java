@@ -1,6 +1,6 @@
 package Monstre;
 
-import Glob.Warrior;
+import Personnages.Warrior;
 
 public abstract class Monstre {
     private String name;
@@ -9,8 +9,8 @@ public abstract class Monstre {
     private int defense;
 
     private boolean faiblesse;
+    private boolean fragilite;
 
-    private int lifeBonus = 0;
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
 
@@ -32,7 +32,6 @@ public abstract class Monstre {
     public abstract int patern(Warrior warrior);
 
     public void resetBonus (){
-        this.lifeBonus = 0;
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
     }
@@ -67,14 +66,6 @@ public abstract class Monstre {
 
     public void setDefense(int defense) {
         this.defense = defense;
-    }
-
-    public int getLifeBonus() {
-        return lifeBonus;
-    }
-
-    public void setLifeBonus(int lifeBonus) {
-        this.lifeBonus = lifeBonus;
     }
 
     public int getAttaqueBonus() {
@@ -117,14 +108,15 @@ public abstract class Monstre {
         this.nextMoveType = nextMoveType;
     }
 
-    public void prendreDommages(int dommages){
+    public int prendreDommages(int dommages){
         int domm = dommages -defense - defenseBonus;
 
-        domm =  domm < 0 ? 0: domm;
-
-        System.out.println(this.name + " reçoit " + domm + "(" + dommages + ")" +" dommages");
+        if(domm < 0){
+            domm = 0;
+        }
         this.life = this.life - domm;
 
+        return domm;
     }
 
     public String getMoveDesc() {
@@ -149,5 +141,13 @@ public abstract class Monstre {
 
     public void setMoveDesc3(String moveDesc3) {
         MoveDesc3 = moveDesc3;
+    }
+
+    public boolean isFragilite() {
+        return fragilite;
+    }
+
+    public void setFragilite(boolean fragilite) {
+        this.fragilite = fragilite;
     }
 }
