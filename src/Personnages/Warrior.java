@@ -43,7 +43,7 @@ public abstract class Warrior {
     }
 
     //    Méthodes
-    public void ajouterEffetFinDeTour(Techniques techniques){
+    public void ajouterEffetFinDeTour(Techniques techniques) {
         effetFinDeTour.add(techniques);
     }
 
@@ -54,7 +54,6 @@ public abstract class Warrior {
     public ArrayList<Techniques> getEffetFinDeTour() {
         return effetFinDeTour;
     }
-
 
 
     public Monstre getMonstre() {
@@ -81,7 +80,7 @@ public abstract class Warrior {
         this.pioche = pioche;
     }
 
-    public void pioche(){
+    public void pioche() {
         this.pioche++;
     }
 
@@ -125,7 +124,7 @@ public abstract class Warrior {
         this.defenseBonus = defenseBonus;
     }
 
-    public ArrayList<Techniques> listCarte(){
+    public ArrayList<Techniques> listCarte() {
         return this.deck;
     }
 
@@ -133,7 +132,7 @@ public abstract class Warrior {
         this.deck = deck;
     }
 
-    public void ajouterCarteDeck(Techniques techniques){
+    public void ajouterCarteDeck(Techniques techniques) {
         this.deck.add(techniques);
     }
 
@@ -169,12 +168,12 @@ public abstract class Warrior {
         this.charisme = charisme;
     }
 
-    public void setCarte(Techniques techniques){
+    public void setCarte(Techniques techniques) {
         deck.add(techniques);
     }
 
-    public void prendreDommages(int dommages){
-        if(dommages -defense - defenseBonus > 0) {
+    public void prendreDommages(int dommages) {
+        if (dommages - defense - defenseBonus > 0) {
             this.life = this.life - (dommages - defense - defenseBonus);
         }
     }
@@ -204,18 +203,28 @@ public abstract class Warrior {
     }
 
     public abstract void setArtsLearned(Techniques artsLearned);
+
     public abstract ArrayList<Techniques> getArtsLearned();
+
     public abstract int getRessource();
+
     public abstract void setRessource(int endurance);
+
     public abstract void perteRessource(int perte);
+
     public abstract ArrayList<Techniques> getDeck();
+
     public abstract String getFondEcran();
+
     public abstract String getClasse();
+
     public abstract String[] getDesc();
+
     public abstract Techniques[] getListTechnique();
+
     public abstract String getTypeRessource();
 
-    public void resetBonus (){
+    public void resetBonus() {
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
     }
