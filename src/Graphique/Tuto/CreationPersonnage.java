@@ -1,6 +1,7 @@
 package Graphique.Tuto;
 
 import Graphique.Bouton.*;
+import Graphique.Cinematique.Intro;
 import Graphique.Fenetre;
 import Graphique.Tuto.ListDial.ListDialCreationDePersonnage;
 import Personnages.Guerrier;
@@ -8,6 +9,7 @@ import Personnages.Warrior;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class CreationPersonnage  extends JComponent implements MouseListener, ActionListener {
     private Fenetre fen;
@@ -238,8 +240,18 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
                 imageDeFond = "/img/tuto.jpg";
                 persoDroite = "/img/narrateur.png";
                 repaint();
+                affichageDial = false;
                 continu++;
                 break;
+
+            case 29 :
+                try {
+                    Intro.readIntro();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                break;
+
 
             default :
                 if (affichageDial) {

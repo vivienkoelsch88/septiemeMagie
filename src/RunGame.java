@@ -1,5 +1,7 @@
+import Graphique.Cinematique.Intro;
 import Graphique.Fenetre;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class RunGame{
@@ -9,7 +11,12 @@ public class RunGame{
         Fenetre fen = new Fenetre();
 
 //        fen.tuto();
-        fen.CreationPersonnage();
+//        fen.CreationPersonnage();
+        try {
+            Intro.readIntro();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
