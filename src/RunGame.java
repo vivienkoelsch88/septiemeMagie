@@ -11,12 +11,12 @@ public class RunGame{
         Fenetre fen = new Fenetre();
 
 //        fen.tuto();
-//        fen.CreationPersonnage();
-        try {
-            Intro.readIntro();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        fen.CreationPersonnage();
+//        try {
+//            Intro.readIntro();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
 }

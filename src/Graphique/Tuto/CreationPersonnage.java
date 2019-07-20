@@ -245,11 +245,7 @@ public class CreationPersonnage  extends JComponent implements MouseListener, Ac
                 break;
 
             case 29 :
-                try {
-                    Intro.readIntro();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
+
                 break;
 
 
