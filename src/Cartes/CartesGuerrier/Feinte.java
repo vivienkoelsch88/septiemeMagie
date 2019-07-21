@@ -20,6 +20,11 @@ public class Feinte extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Augmentation de l'attaque", "Endurance", "Augmentation de l'attaque", "Endurance", "Recule", "Adresse"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         if(plateauDeCombat.getMonstre().getNextMoveType().equals("Défense")){
             plateauDeCombat.getWarrior().setAttaqueBonus(invest * 4);

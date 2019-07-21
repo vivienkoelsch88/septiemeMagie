@@ -20,6 +20,11 @@ public class ViveAttaque extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Avance", "Adresse", "Augmentation de l'attaque", "Adresse", "Augmentation de l'attaque", "Adresse"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setAdresse(plateauDeCombat.getWarrior().getAdresse() - invest);
         plateauDeCombat.getWarrior().setAttaqueBonus(invest * 6);

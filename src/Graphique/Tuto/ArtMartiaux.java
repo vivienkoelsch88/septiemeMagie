@@ -123,6 +123,11 @@ public class ArtMartiaux extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return null;
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
     }
 }

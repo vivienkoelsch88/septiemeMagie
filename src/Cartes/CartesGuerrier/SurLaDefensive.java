@@ -20,6 +20,11 @@ public class SurLaDefensive extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Augmente la défense", "Endurance", "Récupère de l'endurance", "Concentration", "Augmente la défense", "Charisme"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() + (invest * 2));

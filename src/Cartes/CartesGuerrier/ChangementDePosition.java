@@ -21,6 +21,11 @@ public class ChangementDePosition extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Pioche", "", "Augmente la défense", "Endurance", "Augmente la défense", "Endurance"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         plateauDeCombat.getWarrior().setDefenseBonus(invest);

@@ -13,10 +13,15 @@ public class AttaqueDouble extends Techniques {
         super();
         super.setName("Attaque double");
         super.setCout(5);
-        super.setDesc(new String[]{"Frappe deux fois", "", "Effet : ", "Attaque X 2 + investissement", "", "Type : Attaque", "Level : 1"});
+        super.setDesc(new String[]{"Frappe deux fois", "", "Effet : ","Avance", "Attaque X 2 + investissement", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+    }
+
+    @Override
+    public String[] affiche() {
+        return new String[]{"Avance", "Adresse", "Augmentation de l'attaque", "Endurance", "Recule", "Adresse"};
     }
 
     @Override

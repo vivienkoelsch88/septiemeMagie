@@ -13,10 +13,15 @@ public class CoupAssomant extends Techniques {
         super();
         super.setName("Coup assomant");
         super.setCout(5);
-        super.setDesc(new String[]{"Sacrifie vos points de force pour une attaque qui" ,"réduit définitivement l'attaque et la défense de l'adversaire", "", "Effet : ", "Force - investissement", "Attaque et défense + investissement", "", "Type : Attaque", "Level : 1"});
+        super.setDesc(new String[]{"Sacrifie vos points de force pour une attaque qui" ,"réduit définitivement l'attaque de l'adversaire", "", "Effet : ", "Force - investissement", "Attaque et défense + investissement", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+    }
+
+    @Override
+    public String[] affiche() {
+        return new String[]{"Augmente la défense", "Endurance", "Augmentation de l'attaque", "Force", "Réduit l'attaque de l'adversaire", "Force"};
     }
 
     @Override

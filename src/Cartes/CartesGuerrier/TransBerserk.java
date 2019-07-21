@@ -20,6 +20,11 @@ public class TransBerserk extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Aumente votre attaque perma", "Endurance", "Augmente la défense", "Concentration", "Avance", "Force"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         int bonus = Math.round(plateauDeCombat.getWarrior().getForce()/10) * invest;

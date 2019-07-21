@@ -1,22 +1,22 @@
 package Graphique.Bouton;
 
-import Graphique.Tuto.Combat;
+import Graphique.Tuto.CombatTuto;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class Bouton2CombatTuto extends AbstractAction {
     private String name;
-    private Combat combat;
+    private CombatTuto combatTuto;
 
-    public Bouton2CombatTuto(String texte, Combat combat){
+    public Bouton2CombatTuto(String texte, CombatTuto combatTuto){
         super(texte);
         this.name = "Carte 2";
-        this.combat = combat;
+        this.combatTuto = combatTuto;
     }
 
     public void actionPerformed(ActionEvent e) {
-        this.combat.choixTechnique(1);
+        this.combatTuto.choixTechnique(1);
     }
 
     public String getName() {

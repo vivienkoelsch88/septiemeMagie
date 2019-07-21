@@ -68,5 +68,6 @@ public abstract class Techniques {
     public abstract  String getMoveDesc();
     public abstract  String getMoveDesc2();
     public abstract  String getMoveDesc3();
+    public abstract String[] affiche();
 
 }

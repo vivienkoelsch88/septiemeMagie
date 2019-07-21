@@ -13,10 +13,15 @@ public class BriseCoude extends Techniques {
         super();
         super.setName("Brise-coude");
         super.setCout(5);
-        super.setDesc(new String[]{"Inflige faiblesse, les bonus d'attaque ne sont plus appliqués", "", "Effet : ", "Applique Faiblesse", "Attaque + investissement", "", "Type : Attaque", "Level : 1"});
+        super.setDesc(new String[]{"Inflige faiblesse, les bonus d'attaque ne sont plus appliqués", "", "Effet : ", "avance", "Applique Faiblesse", "Attaque + investissement", "", "Type : Attaque", "Level : 1"});
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+    }
+
+    @Override
+    public String[] affiche() {
+        return new String[]{"Avance", "Adresse", "Inflige faiblesse, Augmentation de l'attaque", "Endurance", "Augmente la défense", "Force"};
     }
 
     @Override

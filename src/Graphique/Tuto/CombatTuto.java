@@ -17,7 +17,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Combat extends JComponent implements MouseListener, ActionListener {
+public class CombatTuto extends JComponent implements MouseListener, ActionListener {
     private Warrior warrior;
     private String imageDeFond = "";
     private String persoDroite = "";
@@ -54,7 +54,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
     });
 
 //******************************Constructeur *******************************
-    public Combat(Fenetre fen) {
+    public CombatTuto(Fenetre fen) {
         addMouseListener(this);
         this.dial = new ListDialCombat();
         this.fen = fen;

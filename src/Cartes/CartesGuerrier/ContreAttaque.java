@@ -20,6 +20,11 @@ public class ContreAttaque extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Augmente la défense", "Concentration", "Recule", "Adresse", "Riposte si attaqué", "Endurance"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setDefenseBonus(invest * 2);
         if (plateauDeCombat.getMonstre().getNextMoveType().equals("Attaque")) {

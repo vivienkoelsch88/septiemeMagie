@@ -20,6 +20,11 @@ public class FracasArme extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Attaque et brise l'arme","Endurance", "Augmente la défense", "Force", "Recule", "Adresse"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
        if(plateauDeCombat.getMonstre().isFaiblesse()){
            plateauDeCombat.getMonstre().setAttaque(plateauDeCombat.getMonstre().getAttaque() - 1);

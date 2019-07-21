@@ -1,9 +1,11 @@
 package Graphique;
 
-import Graphique.Tuto.Combat;
+import Graphique.Tuto.CombatTuto;
 import Graphique.Tuto.CreationPersonnage;
 import Graphique.Tuto.Tuto;
 import Monstre.*;
+import Personnages.Guerrier;
+import Personnages.Warrior;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,8 +17,9 @@ import javax.swing.*;
 public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     private Tuto pan = new Tuto(this);
-    private Combat panCombat = new Combat(this);
+    private CombatTuto panCombatTuto = new CombatTuto(this);
     private CreationPersonnage panCreation = new CreationPersonnage(this);
+    private Combat panCombat;
     private String actif;
     private JComponent panelEnCour;
 
@@ -45,19 +48,19 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     public void CombatTuto(){
         Monstre monstre = new Gobelin();
-        this.panelEnCour = this.panCombat;
-        this.setContentPane(panCombat);
-        this.actif = "panCombat";
-        panCombat.setWarrior(this.pan.getWarrior());
-        panCombat.setMonstre(monstre);
-        panCombat.setImageDeFond("/img/combatTuto.jpg");
-        panCombat.setPersoDroite("/img/gobelin.png");
-        panCombat.setLigne1("");
-        panCombat.setLigne2("un gobelin vous fait face");
-        panCombat.setLigne3("");
-        panCombat.setDeck(this.pan.getWarrior().getDeck());
+        this.panelEnCour = this.panCombatTuto;
+        this.setContentPane(panCombatTuto);
+        this.actif = "panCombatTuto";
+        panCombatTuto.setWarrior(this.pan.getWarrior());
+        panCombatTuto.setMonstre(monstre);
+        panCombatTuto.setImageDeFond("/img/combatTuto.jpg");
+        panCombatTuto.setPersoDroite("/img/gobelin.png");
+        panCombatTuto.setLigne1("");
+        panCombatTuto.setLigne2("un gobelin vous fait face");
+        panCombatTuto.setLigne3("");
+        panCombatTuto.setDeck(this.pan.getWarrior().getDeck());
 
-        panCombat.repaint();
+        panCombatTuto.repaint();
         this.getContentPane().revalidate();
     }
 
@@ -75,6 +78,19 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         this.getContentPane().revalidate();
     }
 
+    public void combat(){
+        this.panCombat = new Combat("/img/tuto.jpg", this, new Guerrier(), new Gobelin());
+        this.panelEnCour = this. panCombat;
+        this.setContentPane(panelEnCour);
+        this.actif = "panCombat";
+        panCombat.setPersoDroite("/img/pionNoir.png");
+        panCombat.setJoueur("/img/pionBlanc.png");
+
+
+        panCombat.repaint();
+
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -84,9 +100,9 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     public void keyPressed(KeyEvent e) {
         if(this.actif.equals("pan")){
             pan.keyPressed(e);
-        } else if (this.actif.equals("panCombat")){
+        } else if (this.actif.equals("panCombatTuto")){
             try {
-                panCombat.keyPressed(e);
+                panCombatTuto.keyPressed(e);
             } catch (InterruptedException e1) {
             }
         } else if (this.actif.equals("panCreationPersonnage")){
@@ -110,5 +126,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         return panelEnCour;
     }
 
-
+    public Combat getPanCombat() {
+        return panCombat;
+    }
 }

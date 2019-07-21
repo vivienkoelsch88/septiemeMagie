@@ -21,6 +21,11 @@ public class OuvreGarde extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Augmente la défense", "Endurance", "Frappe et applique faiblesse", "Adresse", "Augmente la défense", "Concentration"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getMonstre().setFragilite(true);
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaqueBonus() + invest);

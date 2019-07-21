@@ -92,4 +92,5 @@ public class Alchimiste extends Warrior {
     public Techniques[] getListTechnique() {
         return ListeCarteGuerrier.getListeTechnique();
     }
+
 }

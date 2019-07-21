@@ -20,6 +20,11 @@ public class FrappeBrutale extends Techniques {
     }
 
     @Override
+    public String[] affiche() {
+        return new String[]{"Augmentation de l'attaque", "Force", "Avance", "Adresse", "Augmentation de l'attaque", "Endurance"};
+    }
+
+    @Override
     public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
         plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
         plateauDeCombat.getWarrior().setAttaqueBonus(invest * 8);

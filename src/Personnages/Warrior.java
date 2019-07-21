@@ -80,10 +80,6 @@ public abstract class Warrior {
         this.pioche = pioche;
     }
 
-    public void pioche() {
-        this.pioche++;
-    }
-
     public int getLife() {
         return life;
     }
@@ -228,4 +224,5 @@ public abstract class Warrior {
         this.attaqueBonus = 0;
         this.defenseBonus = 0;
     }
+
 }
