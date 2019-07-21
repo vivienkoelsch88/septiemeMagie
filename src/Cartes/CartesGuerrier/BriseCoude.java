@@ -1,7 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class BriseCoude extends Techniques {
@@ -17,6 +17,7 @@ public class BriseCoude extends Techniques {
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+        super.setCout1(5);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class BriseCoude extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getMonstre().setFaiblesse(true);
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaqueBonus() + invest);
         plateauDeCombat.getWarrior().perteRessource(invest);

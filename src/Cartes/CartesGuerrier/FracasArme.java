@@ -1,7 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class FracasArme extends Techniques {
@@ -17,6 +17,7 @@ public class FracasArme extends Techniques {
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+        super.setCout3(5);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class FracasArme extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
        if(plateauDeCombat.getMonstre().isFaiblesse()){
            plateauDeCombat.getMonstre().setAttaque(plateauDeCombat.getMonstre().getAttaque() - 1);
        }

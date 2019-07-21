@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3f245ac-2c96-485d-a86e-dd5638aa32f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/ActiverCarteCombat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/AfficheCarteCombat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/RetourChoixCarteCombat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Graphique/Combat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphique/Bouton/ChoixInvestCombat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graphique/Cinematique/IntroLogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/AttaqueDouble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/AttaqueDouble.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/BriseCoude.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/BriseCoude.class" afterDir="false" />
@@ -26,15 +23,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/TransBerserk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/TransBerserk.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/ViveAttaque.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Cartes/CartesGuerrier/ViveAttaque.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Cartes/Techniques.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Cartes/Techniques.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton1CombatTuto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton1CombatTuto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton2CombatTuto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton2CombatTuto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton3CombatTuto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/Bouton3CombatTuto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/OrdreActionCombat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Bouton/OrdreActionCombat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Combat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Fenetre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Fenetre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/PlateauDeCombat.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/ArtMartiaux.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/ArtMartiaux.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Combat$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/Combat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Graphique/Tuto/CreationPersonnage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7Magie/Personnages/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/Personnages/Warrior.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/7Magie/RunGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7Magie/RunGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/BriseCoude.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/BriseCoude.java" afterDir="false" />
@@ -49,14 +42,11 @@
       <change beforePath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/TransBerserk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/TransBerserk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cartes/Techniques.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cartes/Techniques.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CombatTuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CombatTuto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CombatTuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CombatTuto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CombatTuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CombatTuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphique/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Combat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphique/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphique/PlateauDeCombat.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/ArtMartiaux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/ArtMartiaux.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphique/Tuto/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphique/Tuto/CombatTuto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personnages/Alchimiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnages/Alchimiste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personnages/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnages/Warrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunGame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -71,35 +61,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Combat.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="239" column="43" selection-start-line="239" selection-start-column="43" selection-end-line="239" selection-end-column="43" />
+            <state relative-caret-position="85">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10478#10479#0" expanded="true" />
-                <element signature="e#10578#10579#0" expanded="true" />
-                <element signature="e#10650#10651#0" expanded="true" />
-                <element signature="e#10750#10751#0" expanded="true" />
-                <element signature="e#10807#10808#0" expanded="true" />
-                <element signature="e#10876#10877#0" expanded="true" />
-                <element signature="e#10938#10939#0" expanded="true" />
-                <element signature="e#11013#11014#0" expanded="true" />
-                <element signature="e#11078#11079#0" expanded="true" />
-                <element signature="e#11163#11164#0" expanded="true" />
-                <element signature="e#11228#11229#0" expanded="true" />
-                <element signature="e#11313#11314#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
+                <element signature="e#2188#2189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graphique/Combat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="242" column="57" selection-start-line="242" selection-start-column="57" selection-end-line="242" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#14176#14177#0" expanded="true" />
+                <element signature="e#14276#14277#0" expanded="true" />
+                <element signature="e#14348#14349#0" expanded="true" />
+                <element signature="e#14448#14449#0" expanded="true" />
+                <element signature="e#14505#14506#0" expanded="true" />
+                <element signature="e#14574#14575#0" expanded="true" />
+                <element signature="e#14636#14637#0" expanded="true" />
+                <element signature="e#14711#14712#0" expanded="true" />
+                <element signature="e#14776#14777#0" expanded="true" />
+                <element signature="e#14861#14862#0" expanded="true" />
+                <element signature="e#14926#14927#0" expanded="true" />
+                <element signature="e#15011#15012#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java">
+        <entry file="file://$PROJECT_DIR$/src/Cartes/Techniques.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1164#1165#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1367#1368#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1424#1425#0" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
+                <element signature="e#1497#1498#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/ChoixInvestCombat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Graphique/MonPanel.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Tuto/PanWarriors.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton2CreationPersonnage.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton3CreationPersonnage.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/Bouton1AfficherCarte.java" />
@@ -150,29 +186,31 @@
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/Combat.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/ListDial/ListDialCreationDePersonnage.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/RunGame.java" />
         <option value="$PROJECT_DIR$/src/Personnages/Alchimiste.java" />
         <option value="$PROJECT_DIR$/src/Personnages/Warrior.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/AfficheCarteCombat.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/RetourChoixCarteCombat.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Bouton/ActiverCarteCombat.java" />
-        <option value="$PROJECT_DIR$/src/Cartes/Techniques.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Cinematique/IntroLogo.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/RunGame.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java" />
         <option value="$PROJECT_DIR$/src/Graphique/Tuto/ArtMartiaux.java" />
-        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/FracasArme.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/OuvreGarde.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/SurLaDefensive.java" />
-        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ChangementDePosition.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Bouton/ChoixInvestCombat.java" />
+        <option value="$PROJECT_DIR$/src/Graphique/Combat.java" />
+        <option value="$PROJECT_DIR$/src/Cartes/Techniques.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/BriseCoude.java" />
+        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ChangementDePosition.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ContreAttaque.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/CoupAssomant.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/Feinte.java" />
+        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/FracasArme.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/FrappeBrutale.java" />
-        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java" />
         <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/TransBerserk.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java" />
-        <option value="$PROJECT_DIR$/src/Graphique/Combat.java" />
+        <option value="$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java" />
       </list>
     </option>
   </component>
@@ -234,12 +272,6 @@
               <item name="Graphique" type="462c0819:PsiDirectoryNode" />
               <item name="Tuto" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="septiemeMagie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="septiemeMagie" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Personnages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -255,6 +287,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -337,12 +370,12 @@
       <workItem from="1563260593028" duration="3432000" />
       <workItem from="1563264474059" duration="7278000" />
       <workItem from="1563653739981" duration="10000" />
-      <workItem from="1563653880336" duration="15616000" />
+      <workItem from="1563653880336" duration="24836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224140000" />
+    <option name="totallyTimeSpent" value="233360000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,16 +395,16 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19288956" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22844176" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.11292962" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.23240589" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.08510638" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.2913257" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.44684684" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -394,7 +427,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19364598" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19288956" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32569557" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -403,7 +436,7 @@
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.23240589" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.08510638" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.08510638" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.44684684" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -451,49 +484,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Graphique/PlateauDeCombat.java" />
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton1CreationPersonnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/MaitreDesRunes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#1766#1767#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personnages/Ensorceleuse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding>
-            <element signature="imports" />
-            <element signature="e#1998#1999#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton3Personnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/Bouton2Personnage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -575,16 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RunGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CombatTuto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1224">
@@ -648,18 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1129">
-          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
-          <folding>
-            <element signature="e#3844#3845#0" expanded="true" />
-            <element signature="e#3878#3879#0" expanded="true" />
-            <element signature="e#3946#3947#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cartes/AfficherCarte.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -674,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/AfficheCarteCombat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -688,125 +649,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="346" column="46" lean-forward="true" selection-start-line="343" selection-start-column="24" selection-end-line="346" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#1144:2408" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/RetourChoixCarteCombat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/Techniques.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/ArtMartiaux.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="129" column="13" lean-forward="true" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/BriseCoude.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="94" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="115" selection-start-line="23" selection-start-column="115" selection-end-line="23" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/TransBerserk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/SurLaDefensive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="140" selection-start-line="23" selection-start-column="140" selection-end-line="23" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/OuvreGarde.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="144" selection-start-line="24" selection-start-column="144" selection-end-line="24" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/FrappeBrutale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="113" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/FracasArme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/Feinte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/CoupAssomant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="135" selection-start-line="23" selection-start-column="135" selection-end-line="23" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ContreAttaque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ChangementDePosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
         </state>
       </provider>
     </entry>
@@ -820,10 +662,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Cinematique/Intro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Cinematique/CvStory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/Tuto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Cinematique/IntroLogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/CreationPersonnage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#3844#3845#0" expanded="true" />
+            <element signature="e#3878#3879#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#3946#3947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Combat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="205" column="8" lean-forward="true" selection-start-line="205" selection-start-column="8" selection-end-line="205" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#14176#14177#0" expanded="true" />
+            <element signature="e#14276#14277#0" expanded="true" />
+            <element signature="e#14348#14349#0" expanded="true" />
+            <element signature="e#14448#14449#0" expanded="true" />
+            <element signature="e#14505#14506#0" expanded="true" />
+            <element signature="e#14574#14575#0" expanded="true" />
+            <element signature="e#14636#14637#0" expanded="true" />
+            <element signature="e#14711#14712#0" expanded="true" />
+            <element signature="e#14776#14777#0" expanded="true" />
+            <element signature="e#14861#14862#0" expanded="true" />
+            <element signature="e#14926#14927#0" expanded="true" />
+            <element signature="e#15011#15012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Tuto/ArtMartiaux.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="132" column="77" selection-start-line="132" selection-start-column="62" selection-end-line="132" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/RetourChoixCarteCombat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/OrdreActionCombat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphique/Bouton/ChoixInvestCombat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -832,23 +788,138 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graphique/Combat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="239" column="43" selection-start-line="239" selection-start-column="43" selection-end-line="239" selection-end-column="43" />
+        <state relative-caret-position="113">
+          <caret line="242" column="57" selection-start-line="242" selection-start-column="57" selection-end-line="242" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10478#10479#0" expanded="true" />
-            <element signature="e#10578#10579#0" expanded="true" />
-            <element signature="e#10650#10651#0" expanded="true" />
-            <element signature="e#10750#10751#0" expanded="true" />
-            <element signature="e#10807#10808#0" expanded="true" />
-            <element signature="e#10876#10877#0" expanded="true" />
-            <element signature="e#10938#10939#0" expanded="true" />
-            <element signature="e#11013#11014#0" expanded="true" />
-            <element signature="e#11078#11079#0" expanded="true" />
-            <element signature="e#11163#11164#0" expanded="true" />
-            <element signature="e#11228#11229#0" expanded="true" />
-            <element signature="e#11313#11314#0" expanded="true" />
+            <element signature="e#14176#14177#0" expanded="true" />
+            <element signature="e#14276#14277#0" expanded="true" />
+            <element signature="e#14348#14349#0" expanded="true" />
+            <element signature="e#14448#14449#0" expanded="true" />
+            <element signature="e#14505#14506#0" expanded="true" />
+            <element signature="e#14574#14575#0" expanded="true" />
+            <element signature="e#14636#14637#0" expanded="true" />
+            <element signature="e#14711#14712#0" expanded="true" />
+            <element signature="e#14776#14777#0" expanded="true" />
+            <element signature="e#14861#14862#0" expanded="true" />
+            <element signature="e#14926#14927#0" expanded="true" />
+            <element signature="e#15011#15012#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/Techniques.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1497#1498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/BriseCoude.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ChangementDePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ContreAttaque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/CoupAssomant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/Feinte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/FracasArme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/FrappeBrutale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/OuvreGarde.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/SurLaDefensive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/TransBerserk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/AttaqueDouble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cartes/CartesGuerrier/ViveAttaque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
         </state>
       </provider>
     </entry>

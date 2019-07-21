@@ -1,7 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class AttaqueDouble extends Techniques {
@@ -17,18 +17,34 @@ public class AttaqueDouble extends Techniques {
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+        super.setCout1(5);
+        super.setCout3(5);
     }
 
     @Override
     public String[] affiche() {
-        return new String[]{"Avance", "Adresse", "Augmentation de l'attaque", "Endurance", "Recule", "Adresse"};
+        return new String[]{"Avance", "Adresse", "Frappe 2 fois", "Endurance", "Recule", "Adresse"};
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
+        switch (refAction){
+            case 1 :
+                plateauDeCombat.getWarrior().setAdresse(plateauDeCombat.getWarrior().getAdresse() - invest);
+                plateauDeCombat.deplacement(invest / 5);
+                break;
 
-        plateauDeCombat.getWarrior().setAttaqueBonus(invest + plateauDeCombat.getWarrior().getAttaque());
-        plateauDeCombat.getWarrior().perteRessource(invest);
+            case 2 :
+                plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() - invest);
+                plateauDeCombat.attaquer(invest);
+                plateauDeCombat.attaquer(invest);
+                break;
+
+            case 3 :
+                plateauDeCombat.getWarrior().setAdresse(plateauDeCombat.getWarrior().getAdresse() - invest);
+                plateauDeCombat.deplacement(invest / 5 * -1);
+                break;
+        }
     }
 
 //    *************************************************************************************

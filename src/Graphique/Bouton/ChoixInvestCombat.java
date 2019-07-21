@@ -5,19 +5,21 @@ import Graphique.Fenetre;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class OrdreActionCombat   extends AbstractAction {
+public class ChoixInvestCombat extends AbstractAction {
     private Fenetre fen;
     private int refAction;
+    private int value;
 
-    public OrdreActionCombat(Fenetre fen, int numAction, int refAction) {
-        super("" + numAction);
+    public ChoixInvestCombat(Fenetre fen, int value, int refAction) {
+        super("" + value);
         this.fen = fen;
+        this.value = value;
         this.refAction = refAction;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        this.fen.getPanCombat().ordreAction(refAction);
+        this.fen.getPanCombat().modifierInvest(refAction, value);
     }
 
 }

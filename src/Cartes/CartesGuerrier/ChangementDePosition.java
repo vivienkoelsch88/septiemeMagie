@@ -2,7 +2,7 @@ package Cartes.CartesGuerrier;
 
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class ChangementDePosition extends Techniques {
@@ -18,6 +18,7 @@ public class ChangementDePosition extends Techniques {
         super.setLevel(1);
         super.setType("Défense");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+        super.setCout1(0);
     }
 
     @Override
@@ -26,10 +27,10 @@ public class ChangementDePosition extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         plateauDeCombat.getWarrior().setDefenseBonus(invest);
-        plateauDeCombat.pioche();
+        plateauDeCombat.pioche(1);
         plateauDeCombat.getWarrior().perteRessource(invest);
     }
 

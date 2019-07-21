@@ -1,7 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class SurLaDefensive extends Techniques {
@@ -25,7 +25,7 @@ public class SurLaDefensive extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() + (invest * 2));
         plateauDeCombat.getWarrior().setConcentration(plateauDeCombat.getWarrior().getConcentration() - invest);

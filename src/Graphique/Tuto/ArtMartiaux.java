@@ -1,7 +1,7 @@
 package Graphique.Tuto;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class ArtMartiaux extends Techniques {
@@ -63,7 +63,9 @@ public class ArtMartiaux extends Techniques {
 
 
     }
-//    ******************************************************************************************************
+
+
+    //    ******************************************************************************************************
     private void attaqueFurieuse(Warrior guerrier, int invest){
         this.MoveDesc2 = "Vous vous ruez donc sur votre adversaire, les yeux rouges et une envie de meurtre dans les yeux...";
         guerrier.setAttaqueBonus(invest *2);
@@ -128,6 +130,8 @@ public class ArtMartiaux extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
+
     }
+
 }

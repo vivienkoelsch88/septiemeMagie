@@ -1,5 +1,6 @@
 package Graphique;
 
+import Graphique.Cinematique.IntroLogo;
 import Graphique.Tuto.CombatTuto;
 import Graphique.Tuto.CreationPersonnage;
 import Graphique.Tuto.Tuto;
@@ -7,6 +8,7 @@ import Monstre.*;
 import Personnages.Guerrier;
 import Personnages.Warrior;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -22,6 +24,7 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
     private Combat panCombat;
     private String actif;
     private JComponent panelEnCour;
+    private IntroLogo panIntroLogo;
 
     public Fenetre(){
         this.setTitle("La 7ème magie");
@@ -33,6 +36,23 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         addKeyListener(this);
 
         this.setVisible(true);
+    }
+
+    public void suite(){
+
+//        tuto();
+//        CreationPersonnage();
+        combat();
+
+
+
+
+
+//        try {
+//            Intro.readIntro();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public void tuto(){
@@ -88,7 +108,16 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
 
         panCombat.repaint();
+        this.getContentPane().revalidate();
 
+    }
+
+    public void intro(){
+        this.panIntroLogo = new IntroLogo();
+        this.panelEnCour = this.panIntroLogo;
+        this.setContentPane(panelEnCour);
+        this.actif = "panIntroLogo";
+        panIntroLogo.afficher(this);
     }
 
     @Override

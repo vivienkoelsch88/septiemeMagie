@@ -1,8 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
-import Personnages.MaitreDesRunes;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class OuvreGarde extends Techniques {
@@ -26,7 +25,7 @@ public class OuvreGarde extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getMonstre().setFragilite(true);
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaqueBonus() + invest);
         plateauDeCombat.getWarrior().perteRessource(invest);

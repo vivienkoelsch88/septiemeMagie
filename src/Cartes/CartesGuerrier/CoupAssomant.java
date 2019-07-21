@@ -1,7 +1,7 @@
 package Cartes.CartesGuerrier;
 
 import Cartes.Techniques;
-import Graphique.PlateauDeCombat;
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public class CoupAssomant extends Techniques {
@@ -17,6 +17,7 @@ public class CoupAssomant extends Techniques {
         super.setLevel(1);
         super.setType("Attaque");
         super.setImage("/Cartes/CartesGuerrier/ImageCarteGuerrier/Brisecoude.png");
+        super.setCout3(5);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class CoupAssomant extends Techniques {
     }
 
     @Override
-    public void utilisation(PlateauDeCombat plateauDeCombat, int invest) {
+    public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
         plateauDeCombat.getMonstre().setAttaque(plateauDeCombat.getMonstre().getAttaque() - invest);
         plateauDeCombat.getMonstre().setDefense(plateauDeCombat.getMonstre().getDefense() - invest);
