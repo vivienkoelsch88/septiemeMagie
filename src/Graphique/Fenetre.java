@@ -5,10 +5,9 @@ import Graphique.Tuto.CombatTuto;
 import Graphique.Tuto.CreationPersonnage;
 import Graphique.Tuto.Tuto;
 import Monstre.*;
+import Monstre.MonstresTuto.Gobelin;
 import Personnages.Guerrier;
-import Personnages.Warrior;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;

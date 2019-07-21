@@ -1,5 +1,6 @@
 package Monstre;
 
+import Graphique.Combat;
 import Personnages.Warrior;
 
 public abstract class Monstre {
@@ -150,4 +151,6 @@ public abstract class Monstre {
     public void setFragilite(boolean fragilite) {
         this.fragilite = fragilite;
     }
+
+    public abstract void tourDeJeuDuMonstre(Combat combat);
 }

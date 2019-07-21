@@ -30,7 +30,6 @@ public class TransBerserk extends Techniques {
     public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
         plateauDeCombat.getWarrior().setAttaqueBonus(plateauDeCombat.getWarrior().getAttaque() * -1);
         int bonus = Math.round(plateauDeCombat.getWarrior().getForce()/10) * invest;
-        plateauDeCombat.getWarrior().setAttaqueBonus2(bonus);
         plateauDeCombat.getWarrior().perteRessource(invest);
     }
 

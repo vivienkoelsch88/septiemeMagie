@@ -32,14 +32,14 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
     private boolean afficherMain = true;
     private int Action1 = 1;
     private int Action2 = 2;
-    private int Action3 = 3;
+    private int Action3 = 0;
     private int compteurChoix = 1;
     private String attributInvest1;
     private String attributInvest2;
     private String attributInvest3;
-    private int investissement1 = 0;
-    private int investissement2 = 0;
-    private int investissement3 = 0;
+    private int[] investissement = {0,0,0};
+    private int defenseDuWarrior = 0;
+    private String TypeNextMove = "";
 
 
     public Combat(String imageDeFond, Fenetre fen, Warrior warrior, Monstre monstre) {
@@ -150,11 +150,11 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
             font = new Font("desc", Font.BOLD, 15);
             g.setFont(font);
             g.drawString( mainDuJoueur.get(carteChoisie).affiche()[0], 280, 140);
-            g.drawString( "Investir " + attributInvest1 + " : " + investissement1, 280, 190);
+            g.drawString( "Investir " + attributInvest1 + " : " + investissement[0], 280, 190);
             g.drawString( mainDuJoueur.get(carteChoisie).affiche()[2], 280, 290);
-            g.drawString( "Investir " + attributInvest2 + " : " + investissement2, 280, 340);
+            g.drawString( "Investir " + attributInvest2 + " : " + investissement[1], 280, 340);
             g.drawString( mainDuJoueur.get(carteChoisie).affiche()[4], 280, 440);
-            g.drawString( "Investir " + attributInvest3 + " : " + investissement3, 280, 490);
+            g.drawString( "Investir " + attributInvest3 + " : " + investissement[2], 280, 490);
 
 
             JButton OrdreAction = new JButton(new OrdreActionCombat(this.fen, Action1, 1));
@@ -223,9 +223,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         afficherMain = true;
         this.removeAll();
         carteChoisie = 0;
-        investissement1 = 0;
-        investissement2 = 0;
-        investissement3 = 0;
+        investissement = new int[]{0, 0, 0};
         repaint();
     }
 
@@ -234,42 +232,84 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         this.removeAll();
         this.message = "Vous avez choisis la carte : " + mainDuJoueur.get(carteChoisie).getName();
         repaint();
-        tourDeJeu();
+        tourDeJeu(1);
     }
 
     public void modifierInvest(int refAction, int value){
         switch (refAction){
             case 1 :
-                investissement1 = investissement1 + value * mainDuJoueur.get(carteChoisie).getCout1();
-                if(investissement1 < 0){
-                    investissement1 = 0;
-                } else if (investissement1 > mainDuJoueur.get(carteChoisie).getLevel() * 10){
-                    investissement1 = investissement1 - mainDuJoueur.get(carteChoisie).getCout1();
+                investissement[0] = investissement[0] + value * mainDuJoueur.get(carteChoisie).getCout1();
+                if(investissement[0] < 0){
+                    investissement[0] = 0;
+                } else if (investissement[0] > mainDuJoueur.get(carteChoisie).getLevel() * 10){
+                    investissement[0] = investissement[0] - mainDuJoueur.get(carteChoisie).getCout1();
                 }
                 break;
 
             case 2 :
-                investissement2 = investissement2 + value * mainDuJoueur.get(carteChoisie).getCout2();
-                if(investissement2 < 0){
-                    investissement2 = 0;
-                } else if (investissement2 > mainDuJoueur.get(carteChoisie).getLevel() * 10){
-                    investissement2 = investissement2 - mainDuJoueur.get(carteChoisie).getCout2();
+                investissement[1] = investissement[1] + value * mainDuJoueur.get(carteChoisie).getCout2();
+                if(investissement[1] < 0){
+                    investissement[1] = 0;
+                } else if (investissement[1] > mainDuJoueur.get(carteChoisie).getLevel() * 10){
+                    investissement[1] = investissement[1] - mainDuJoueur.get(carteChoisie).getCout2();
                 }
                 break;
 
             case 3 :
-                investissement3 = investissement3 + value * mainDuJoueur.get(carteChoisie).getCout3();
-                if(investissement3 < 0){
-                    investissement3 = 0;
-                } else if (investissement3 > mainDuJoueur.get(carteChoisie).getLevel() * 10){
-                    investissement3 = investissement3 - mainDuJoueur.get(carteChoisie).getCout3();
+                investissement[2] = investissement[2] + value * mainDuJoueur.get(carteChoisie).getCout3();
+                if(investissement[2] < 0){
+                    investissement[2] = 0;
+                } else if (investissement[2] > mainDuJoueur.get(carteChoisie).getLevel() * 10){
+                    investissement[2] = investissement[2] - mainDuJoueur.get(carteChoisie).getCout3();
                 }
                 break;
         }
         repaint();
     }
 
-    private void tourDeJeu(){
+    private void tourDeJeu(int Action){
+        int refAction1 = 0;
+        int refAction2= 0;
+        if(Action1 == 1){
+            refAction1 = 1;
+        } else if (Action1 == 2){
+            refAction2 = 1;
+        }
+        if(Action2 == 1){
+            refAction1 = 2;
+        } else if (Action2 == 2){
+            refAction2 = 2;
+        }
+        if(Action3 == 1){
+            refAction1 = 3;
+        } else if (Action3 == 2){
+            refAction2 = 3;
+        }
+        switch (Action){
+            case 1 :
+                mainDuJoueur.get(carteChoisie).utilisation(this, investissement[refAction1 - 1], refAction1);
+                tourDeJeuDuMonstre(1);
+                break;
+
+            case 2 :
+                mainDuJoueur.get(carteChoisie).utilisation(this, investissement[refAction2 - 1], refAction2);
+                tourDeJeuDuMonstre(2);
+                break;
+        }
+
+    }
+
+    public void tourDeJeuDuMonstre(int refAction){
+        this.monstre.tourDeJeuDuMonstre(this);
+        if(refAction == 1){
+            tourDeJeu(2);
+        } else {
+            finDuTour();
+        }
+
+    }
+
+    public void finDuTour(){
 
     }
 
@@ -282,11 +322,20 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
     }
 
     public void deplacement(int nbrCase){
-
+        placementJoueur = placementMonstre + nbrCase;
+        if(placementJoueur < 1){
+            placementJoueur = 1;
+        } else if (placementJoueur >= placementMonstre){
+            placementJoueur = placementMonstre - 1;
+        }
     }
 
     public void attaquer(int puissance){
+        this.monstre.prendreDommages(puissance + this.warrior.getAttaque() + this.warrior.getAttaqueBonus());
+    }
 
+    public void defendre(int puissance){
+        this.defenseDuWarrior = this.defenseDuWarrior + puissance;
     }
 
     //    ******************************** Choix de l'ordre des actions *****************************
@@ -302,14 +351,14 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
                     if(compteurChoix == 2){
                         compteurChoix = 1;
                         if(Action2 == 1){
-                            Action3 = 3;
+                            Action3 = 0;
                         } else {
-                            Action2 = 3;
+                            Action2 = 0;
                         }
                     } else {
                         compteurChoix = 2;
                         Action2 = 2;
-                        Action3 = 3;
+                        Action3 = 0;
                     }
                     break;
 
@@ -321,14 +370,14 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
                     if(compteurChoix == 2){
                         compteurChoix = 1;
                         if(Action1 == 1){
-                            Action3 = 3;
+                            Action3 = 0;
                         } else {
-                            Action1 = 3;
+                            Action1 = 0;
                         }
                     } else {
                         compteurChoix = 2;
                         Action1 = 2;
-                        Action3 = 3;
+                        Action3 = 0;
                     }
                     break;
 
@@ -340,13 +389,13 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
                     if(compteurChoix == 2){
                         compteurChoix = 1;
                         if(Action2 == 1){
-                            Action1 = 3;
+                            Action1 = 0;
                         } else {
-                            Action2 = 3;
+                            Action2 = 0;
                         }
                     } else {
                         compteurChoix = 2;
-                        Action2 = 3;
+                        Action2 = 0;
                         Action1 = 2;
                     }
                     break;
@@ -432,5 +481,13 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
 
     public void setMonstre(Monstre monstre) {
         this.monstre = monstre;
+    }
+
+    public String getTypeNextMove() {
+        return TypeNextMove;
+    }
+
+    public void setTypeNextMove(String typeNextMove) {
+        TypeNextMove = typeNextMove;
     }
 }

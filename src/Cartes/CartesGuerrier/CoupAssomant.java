@@ -27,10 +27,22 @@ public class CoupAssomant extends Techniques {
 
     @Override
     public void utilisation(Combat plateauDeCombat, int invest, int refAction) {
-        plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
-        plateauDeCombat.getMonstre().setAttaque(plateauDeCombat.getMonstre().getAttaque() - invest);
-        plateauDeCombat.getMonstre().setDefense(plateauDeCombat.getMonstre().getDefense() - invest);
-        plateauDeCombat.getWarrior().perteRessource(invest);
+        switch (refAction){
+            case 1 :
+                plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() - invest);
+                plateauDeCombat.defendre(invest);
+                break;
+
+            case 2 :
+                plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
+                plateauDeCombat.attaquer(invest);
+                break;
+
+            case 3 :
+                plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
+                plateauDeCombat.getMonstre().setAttaqueBonus(plateauDeCombat.getMonstre().getAttaqueBonus() - invest/5);
+                break;
+        }
     }
 
 //    ***********************************************************************

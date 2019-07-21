@@ -1,5 +1,7 @@
-package Monstre;
+package Monstre.MonstresTuto;
 
+import Graphique.Combat;
+import Monstre.Monstre;
 import Personnages.Warrior;
 
 public class Orc extends Monstre{
@@ -45,5 +47,8 @@ public class Orc extends Monstre{
         return this.getAttaque() + this.getAttaqueBonus();
     }
 
+    @Override
+    public void tourDeJeuDuMonstre(Combat combat) {
 
+    }
 }

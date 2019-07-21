@@ -2,7 +2,7 @@ package Personnages;
 
 import Cartes.Techniques;
 import Monstre.Monstre;
-import Monstre.Orc;
+import Monstre.MonstresTuto.Orc;
 
 import java.util.ArrayList;
 
@@ -27,8 +27,6 @@ public abstract class Warrior {
     private int attaqueBonus = 0;
     private int defenseBonus = 0;
     private int pioche = 0;
-    private int attaqueBonus2 = 0;
-    private int defenseBonus2 = 0;
 
     //    Constructeurs
 
@@ -89,7 +87,7 @@ public abstract class Warrior {
     }
 
     public int getAttaque() {
-        return attaque + attaqueBonus2;
+        return attaque;
     }
 
     public void setAttaque(int attaque) {
@@ -182,21 +180,6 @@ public abstract class Warrior {
         this.icon = icon;
     }
 
-    public int getAttaqueBonus2() {
-        return attaqueBonus2;
-    }
-
-    public void setAttaqueBonus2(int attaqueBonus2) {
-        this.attaqueBonus2 = attaqueBonus2;
-    }
-
-    public int getDefenseBonus2() {
-        return defenseBonus2;
-    }
-
-    public void setDefenseBonus2(int defenseBonus2) {
-        this.defenseBonus2 = defenseBonus2;
-    }
 
     public abstract void setArtsLearned(Techniques artsLearned);
 
