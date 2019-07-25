@@ -31,16 +31,19 @@ public class CoupAssomant extends Techniques {
             case 1 :
                 plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() - invest);
                 plateauDeCombat.defendre(invest);
+                plateauDeCombat.setMessage("Vous vous défendez");
                 break;
 
             case 2 :
                 plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
                 plateauDeCombat.attaquer(invest);
+                plateauDeCombat.setMessage("Vous attaquez");
                 break;
 
             case 3 :
                 plateauDeCombat.getWarrior().setForce(plateauDeCombat.getWarrior().getForce() - invest);
                 plateauDeCombat.getMonstre().setAttaqueBonus(plateauDeCombat.getMonstre().getAttaqueBonus() - invest/5);
+                plateauDeCombat.setMessage("Vous réduisez l'attaque de l'adversaire de " + invest/5);
                 break;
         }
     }

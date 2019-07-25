@@ -32,17 +32,20 @@ public class AttaqueDouble extends Techniques {
             case 1 :
                 plateauDeCombat.getWarrior().setAdresse(plateauDeCombat.getWarrior().getAdresse() - invest);
                 plateauDeCombat.deplacement(invest / 5);
+                plateauDeCombat.setMessage("Vous Avancez");
                 break;
 
             case 2 :
                 plateauDeCombat.getWarrior().setRessource(plateauDeCombat.getWarrior().getRessource() - invest);
                 plateauDeCombat.attaquer(invest);
                 plateauDeCombat.attaquer(invest);
+                plateauDeCombat.setMessage("Vous attaquez 2 X");
                 break;
 
             case 3 :
                 plateauDeCombat.getWarrior().setAdresse(plateauDeCombat.getWarrior().getAdresse() - invest);
                 plateauDeCombat.deplacement(invest / 5 * -1);
+                plateauDeCombat.setMessage("Vous reculez");
                 break;
         }
     }

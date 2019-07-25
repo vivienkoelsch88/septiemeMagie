@@ -8,6 +8,7 @@ public class RunGame{
         Fenetre fen = new Fenetre();
 
         fen.intro();
+//        fen.tuto();
 
     }
 

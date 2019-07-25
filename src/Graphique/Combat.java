@@ -39,10 +39,12 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
     private String attributInvest3;
     private int[] investissement = {0,0,0};
     private int defenseDuWarrior = 0;
-    private String TypeNextMove = "";
+    private String NextMoveType = "";
+    private int compteurTour = 1;
 
 
     public Combat(String imageDeFond, Fenetre fen, Warrior warrior, Monstre monstre) {
+        addMouseListener(this);
         this.imageDeFond = imageDeFond;
         this.fen = fen;
         this.warrior = warrior;
@@ -91,7 +93,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
 
         g.setColor((Color.GRAY));
         g.fillRoundRect(50 , 365, this.getWidth() - 100, 80, 5, 5);
-        Font font = new Font("desc", Font.BOLD, 25);
+        Font font = new Font("desc", Font.BOLD, 12);
         g.setFont(font);
         g.setColor((Color.WHITE));
         g.drawString(message , 80, 410);
@@ -109,6 +111,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         g.drawString(this.warrior.getTypeRessource() + " : " + this.warrior.getRessource(), 15, 110);
         g.drawString("Attaque : " + this.warrior.getAttaque() + "  Défense : " + this.warrior.getDefense(), 15, 130);
         g.drawString("Vie : " + this.warrior.getLife(), 15, 150);
+        g.drawString("Vie du monstre : " + this.monstre.getLife(), 15, 170);
 
 //        ******************************** Afficher la main du joueur **********************************************
         if(afficherMain) {
@@ -232,7 +235,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         this.removeAll();
         this.message = "Vous avez choisis la carte : " + mainDuJoueur.get(carteChoisie).getName();
         repaint();
-        tourDeJeu(1);
+        tourDeJeu(this.compteurTour);
     }
 
     public void modifierInvest(int refAction, int value){
@@ -268,6 +271,7 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
     }
 
     private void tourDeJeu(int Action){
+        this.NextMoveType = this.monstre.getNextMoveType();
         int refAction1 = 0;
         int refAction2= 0;
         if(Action1 == 1){
@@ -288,28 +292,24 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         switch (Action){
             case 1 :
                 mainDuJoueur.get(carteChoisie).utilisation(this, investissement[refAction1 - 1], refAction1);
-                tourDeJeuDuMonstre(1);
+                repaint();
+                compteurTour++;
                 break;
 
             case 2 :
                 mainDuJoueur.get(carteChoisie).utilisation(this, investissement[refAction2 - 1], refAction2);
-                tourDeJeuDuMonstre(2);
+                repaint();
+                compteurTour++;
                 break;
-        }
-
-    }
-
-    public void tourDeJeuDuMonstre(int refAction){
-        this.monstre.tourDeJeuDuMonstre(this);
-        if(refAction == 1){
-            tourDeJeu(2);
-        } else {
-            finDuTour();
         }
 
     }
 
     public void finDuTour(){
+        compteurTour = 1;
+        message = "Fin de tour 1...";
+        afficherMain = true;
+        repaint();
 
     }
 
@@ -403,6 +403,68 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         repaint();
     }
 
+//    ********************************** Gestion des clicks *******************************
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        switch (this.compteurTour){
+            case 2 :
+                if(checkEnd()) {
+                    this.monstre.tourDeJeuDuMonstre(this);
+                    repaint();
+                    this.compteurTour++;
+                }
+                break;
+
+            case 3 :
+                if(checkEnd()) {
+                    tourDeJeu(2);
+                    repaint();
+                    this.compteurTour++;
+                }
+                break;
+
+            case 5 :
+                if(checkEnd()) {
+                    this.monstre.tourDeJeuDuMonstre(this);
+                    repaint();
+                    this.compteurTour++;
+                }
+                break;
+
+            case 6 :
+                if(checkEnd()) {
+                    finDuTour();
+                }
+                break;
+
+        }
+    }
+
+//    ************************************** Gestion du monstre et du combat *******************************
+    public void deplacerMonstre(int deplacement){
+        this.placementMonstre = this.placementMonstre - deplacement;
+        if(placementMonstre <= placementJoueur){
+            placementMonstre = placementJoueur +1;
+        }
+    }
+
+    public boolean checkEnd(){
+        if(this.monstre.getLife() < 0){
+            this.removeAll();
+            message = "Et il meurt! Bien joué!";
+            repaint();
+            return false;
+        }
+        if(this.warrior.getLife() < 0){
+            this.removeAll();
+            message = "Hélas, vous succombez sous les coups...";
+            this.fen.mort();
+            return false;
+        }
+        return true;
+    }
+
 
 //    *******************************************************************************************
     @Override
@@ -412,11 +474,6 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
 
     }
 
@@ -483,11 +540,35 @@ public class Combat extends JComponent implements MouseListener, ActionListener 
         this.monstre = monstre;
     }
 
-    public String getTypeNextMove() {
-        return TypeNextMove;
+    public String getNextMoveType() {
+        return NextMoveType;
     }
 
-    public void setTypeNextMove(String typeNextMove) {
-        TypeNextMove = typeNextMove;
+    public void setNextMoveType(String nextMoveType) {
+        NextMoveType = nextMoveType;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public int getPlacementJoueur() {
+        return placementJoueur;
+    }
+
+    public void setPlacementJoueur(int placementJoueur) {
+        this.placementJoueur = placementJoueur;
+    }
+
+    public int getPlacementMonstre() {
+        return placementMonstre;
+    }
+
+    public void setPlacementMonstre(int placementMonstre) {
+        this.placementMonstre = placementMonstre;
     }
 }

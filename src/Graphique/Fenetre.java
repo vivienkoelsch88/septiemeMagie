@@ -3,6 +3,7 @@ package Graphique;
 import Graphique.Cinematique.IntroLogo;
 import Graphique.Tuto.CombatTuto;
 import Graphique.Tuto.CreationPersonnage;
+import Graphique.Tuto.EcranDeMort;
 import Graphique.Tuto.Tuto;
 import Monstre.*;
 import Monstre.MonstresTuto.Gobelin;
@@ -39,30 +40,28 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
 
     public void suite(){
 
-//        tuto();
+        tuto();
 //        CreationPersonnage();
-        combat();
+//        combat();
+//        mort();
 
 
 
 
-
-//        try {
-//            Intro.readIntro();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
     }
 
     public void tuto(){
         this.actif = "pan";
         this.panelEnCour = this.pan;
+        this.setContentPane(panelEnCour);
         pan.setImageDeFond("/img/tuto.jpg");
         pan.setPersoDroite("/img/narrateur.png");
         pan.setLigne1("Bienvenue sur la 7eme magie, on va commencer par créer votre personnage,");
         pan.setLigne2("Pour le momment il n'existe qu'une classe, le Guerrier,");
         pan.setLigne3("Celui-ci possède des stats moyennes autant en défense qu'en attaque, parfait pour commencer...");
+
         pan.repaint();
+        this.getContentPane().revalidate();
     }
 
     public void CombatTuto(){
@@ -117,6 +116,13 @@ public class Fenetre extends JFrame implements KeyListener, ActionListener {
         this.setContentPane(panelEnCour);
         this.actif = "panIntroLogo";
         panIntroLogo.afficher(this);
+    }
+
+    public void mort(){
+        this.panelEnCour = new EcranDeMort();
+        this.setContentPane(panelEnCour);
+        this.panelEnCour.repaint();
+        this.getContentPane().revalidate();
     }
 
     @Override

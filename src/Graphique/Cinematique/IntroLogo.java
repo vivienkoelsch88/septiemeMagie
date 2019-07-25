@@ -42,7 +42,6 @@ public class IntroLogo extends JPanel implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        System.out.println("Test");
         if(taille < 150){
             taille = 150;
         } else {
